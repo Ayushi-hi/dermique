@@ -1,0 +1,72 @@
+/* ── DERMIQUÉ — Global Styles ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --obsidian:   #080808;
+  --onyx:       #0f0f0f;
+  --charcoal:   #161616;
+  --carbon:     #1e1e1e;
+  --graphite:   #2a2a2a;
+  --mist:       #3a3a3a;
+  --smoke:      rgba(255,255,255,0.06);
+  --fog:        rgba(255,255,255,0.04);
+
+  --gold:       #c9a84c;
+  --goldL:      #e4c46a;
+  --goldD:      #a8863a;
+  --goldPale:   #f5e6b8;
+  --goldSheer:  rgba(201,168,76,0.12);
+  --goldBorder: rgba(201,168,76,0.22);
+  --goldGlow:   rgba(201,168,76,0.08);
+
+  --ivory:      #f8f4ec;
+  --pearl:      #ede8dc;
+  --parchment:  #e0d8c8;
+
+  --safe:       #7ab68a;
+  --safeGlow:   rgba(122,182,138,0.15);
+  --caution:    #d4a855;
+  --cautionGlow:rgba(212,168,85,0.15);
+  --danger:     #c47060;
+  --dangerGlow: rgba(196,112,96,0.15);
+
+  --text:       rgba(255,255,255,0.92);
+  --textMid:    rgba(255,255,255,0.55);
+  --textDim:    rgba(255,255,255,0.32);
+  --textFaint:  rgba(255,255,255,0.14);
+
+  --font-display: 'Cinzel', serif;
+  --font-serif:   'Cormorant', serif;
+  --font-body:    'Didact Gothic', sans-serif;
+  --font-reading: 'EB Garamond', serif;
+
+  --ease-luxury: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-snap:   cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--obsidian);
+  color: var(--text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-track { background: var(--obsidian); }
+::-webkit-scrollbar-thumb { background: var(--goldBorder); border-radius: 2px; }
+
+::selection { background: var(--goldSheer); color: var(--goldPale); }
+
+/* ── Custom Cursor ── */
+* { cursor: none !important; }
+button, a, [role="button"], span[onClick], input, label { cursor: none !important; pointer-events: auto !important; }
+
+/* ── Utility ── */
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+
+/* ── Scrollbar Firefox ── */
+* { scrollbar-width: thin; scrollbar-color: var(--goldBorder) var(--obsidian); }
