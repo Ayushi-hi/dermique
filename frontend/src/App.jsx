@@ -757,7 +757,7 @@ function Footer({ onScanClick }) {
         </div>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 28, borderTop: '1px solid rgba(255,255,255,0.05)', flexWrap: 'wrap', gap: 12 }}>
           <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, color: '#8a6030', letterSpacing: '1px' }}>© 2025 DERMIQUÉ. For informational purposes only.</div>
-          <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, color: '#8a6030', letterSpacing: '1px' }}>Powered by Claude AI</div>
+          <div style={{ fontFamily: 'var(--font-body)', fontSize: 10, color: '#8a6030', letterSpacing: '1px' }}>+91-xxxxxxxxx</div>
         </div>
       </div>
     </footer>
