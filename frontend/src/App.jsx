@@ -322,7 +322,7 @@ function ScannerSection() {
       fd.append('image',     file)
       fd.append('skinTypes', skins.join(', '))
 
-      const response = await fetch('/api/analyze', {
+      const response = await fetch('https://dermique-backend.onrender.com/api/analyze', {
         method: 'POST',
         body:   fd,
       })
