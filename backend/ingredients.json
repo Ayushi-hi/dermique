@@ -1,0 +1,1506 @@
+[
+  {
+    "input": "Ingredient: Niacinamide. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Brightening and sebum control. Benefit: Controls oil, minimises pores, reduces dark spots and redness. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Niacinamide. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Brightening and sebum control. Benefit: Controls oil, minimises pores, reduces dark spots and redness. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Niacinamide. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Brightening and sebum control. Benefit: Controls oil, minimises pores, reduces dark spots and redness. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Niacinamide. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Brightening and sebum control. Benefit: Controls oil, minimises pores, reduces dark spots and redness. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Niacinamide. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Brightening and sebum control. Benefit: Controls oil, minimises pores, reduces dark spots and redness. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Niacinamide. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Brightening and sebum control. Benefit: Controls oil, minimises pores, reduces dark spots and redness. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Niacinamide. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Brightening and sebum control. Benefit: Controls oil, minimises pores, reduces dark spots and redness. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Niacinamide. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Brightening and sebum control. Benefit: Controls oil, minimises pores, reduces dark spots and redness. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Hyaluronic Acid. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Deep hydration. Benefit: Holds 1000x its weight in water, deeply hydrates and plumps skin. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Hyaluronic Acid. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Deep hydration. Benefit: Holds 1000x its weight in water, deeply hydrates and plumps skin. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Hyaluronic Acid. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Deep hydration. Benefit: Holds 1000x its weight in water, deeply hydrates and plumps skin. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Hyaluronic Acid. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Deep hydration. Benefit: Holds 1000x its weight in water, deeply hydrates and plumps skin. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Hyaluronic Acid. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Deep hydration. Benefit: Holds 1000x its weight in water, deeply hydrates and plumps skin. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Hyaluronic Acid. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Deep hydration. Benefit: Holds 1000x its weight in water, deeply hydrates and plumps skin. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Hyaluronic Acid. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Deep hydration. Benefit: Holds 1000x its weight in water, deeply hydrates and plumps skin. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Hyaluronic Acid. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Deep hydration. Benefit: Holds 1000x its weight in water, deeply hydrates and plumps skin. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Glycerin. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Humectant. Benefit: Draws moisture from air into skin, keeps skin soft and hydrated. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Glycerin. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Humectant. Benefit: Draws moisture from air into skin, keeps skin soft and hydrated. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Glycerin. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Humectant. Benefit: Draws moisture from air into skin, keeps skin soft and hydrated. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Glycerin. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Humectant. Benefit: Draws moisture from air into skin, keeps skin soft and hydrated. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Glycerin. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Humectant. Benefit: Draws moisture from air into skin, keeps skin soft and hydrated. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Glycerin. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Humectant. Benefit: Draws moisture from air into skin, keeps skin soft and hydrated. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Glycerin. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Humectant. Benefit: Draws moisture from air into skin, keeps skin soft and hydrated. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Glycerin. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Humectant. Benefit: Draws moisture from air into skin, keeps skin soft and hydrated. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Ceramide NP. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Barrier repair. Benefit: Restores and strengthens the skin moisture barrier. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Ceramide NP. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Barrier repair. Benefit: Restores and strengthens the skin moisture barrier. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Ceramide NP. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Barrier repair. Benefit: Restores and strengthens the skin moisture barrier. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Ceramide NP. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Barrier repair. Benefit: Restores and strengthens the skin moisture barrier. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Ceramide NP. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Barrier repair. Benefit: Restores and strengthens the skin moisture barrier. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Ceramide NP. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Barrier repair. Benefit: Restores and strengthens the skin moisture barrier. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Ceramide NP. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Barrier repair. Benefit: Restores and strengthens the skin moisture barrier. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Ceramide NP. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Barrier repair. Benefit: Restores and strengthens the skin moisture barrier. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Panthenol. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Healing and soothing. Benefit: Attracts moisture, soothes irritation, promotes skin healing. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Panthenol. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Healing and soothing. Benefit: Attracts moisture, soothes irritation, promotes skin healing. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Panthenol. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Healing and soothing. Benefit: Attracts moisture, soothes irritation, promotes skin healing. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Panthenol. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Healing and soothing. Benefit: Attracts moisture, soothes irritation, promotes skin healing. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Panthenol. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Healing and soothing. Benefit: Attracts moisture, soothes irritation, promotes skin healing. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Panthenol. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Healing and soothing. Benefit: Attracts moisture, soothes irritation, promotes skin healing. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Panthenol. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Healing and soothing. Benefit: Attracts moisture, soothes irritation, promotes skin healing. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Panthenol. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Healing and soothing. Benefit: Attracts moisture, soothes irritation, promotes skin healing. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Allantoin. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Soothing and smoothing. Benefit: Promotes cell renewal, softens skin, reduces irritation. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Allantoin. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Soothing and smoothing. Benefit: Promotes cell renewal, softens skin, reduces irritation. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Allantoin. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Soothing and smoothing. Benefit: Promotes cell renewal, softens skin, reduces irritation. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Allantoin. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Soothing and smoothing. Benefit: Promotes cell renewal, softens skin, reduces irritation. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Allantoin. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Soothing and smoothing. Benefit: Promotes cell renewal, softens skin, reduces irritation. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Allantoin. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Soothing and smoothing. Benefit: Promotes cell renewal, softens skin, reduces irritation. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Allantoin. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Soothing and smoothing. Benefit: Promotes cell renewal, softens skin, reduces irritation. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Allantoin. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Soothing and smoothing. Benefit: Promotes cell renewal, softens skin, reduces irritation. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Aloe Vera. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Soothing and anti-inflammatory. Benefit: Calms redness, reduces inflammation, provides lightweight hydration. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Aloe Vera. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Soothing and anti-inflammatory. Benefit: Calms redness, reduces inflammation, provides lightweight hydration. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Aloe Vera. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Soothing and anti-inflammatory. Benefit: Calms redness, reduces inflammation, provides lightweight hydration. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Aloe Vera. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Soothing and anti-inflammatory. Benefit: Calms redness, reduces inflammation, provides lightweight hydration. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Aloe Vera. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Soothing and anti-inflammatory. Benefit: Calms redness, reduces inflammation, provides lightweight hydration. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Aloe Vera. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Soothing and anti-inflammatory. Benefit: Calms redness, reduces inflammation, provides lightweight hydration. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Aloe Vera. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Soothing and anti-inflammatory. Benefit: Calms redness, reduces inflammation, provides lightweight hydration. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Aloe Vera. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Soothing and anti-inflammatory. Benefit: Calms redness, reduces inflammation, provides lightweight hydration. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Centella Asiatica. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Healing and collagen boosting. Benefit: Promotes collagen production, heals skin, calms inflammation. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Centella Asiatica. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Healing and collagen boosting. Benefit: Promotes collagen production, heals skin, calms inflammation. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Centella Asiatica. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Healing and collagen boosting. Benefit: Promotes collagen production, heals skin, calms inflammation. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Centella Asiatica. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Healing and collagen boosting. Benefit: Promotes collagen production, heals skin, calms inflammation. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Centella Asiatica. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Healing and collagen boosting. Benefit: Promotes collagen production, heals skin, calms inflammation. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Centella Asiatica. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Healing and collagen boosting. Benefit: Promotes collagen production, heals skin, calms inflammation. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Centella Asiatica. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Healing and collagen boosting. Benefit: Promotes collagen production, heals skin, calms inflammation. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Centella Asiatica. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Healing and collagen boosting. Benefit: Promotes collagen production, heals skin, calms inflammation. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Zinc Oxide. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Physical SPF and soothing. Benefit: Broad spectrum UV protection, non-irritating, anti-inflammatory. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Zinc Oxide. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Physical SPF and soothing. Benefit: Broad spectrum UV protection, non-irritating, anti-inflammatory. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Zinc Oxide. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Physical SPF and soothing. Benefit: Broad spectrum UV protection, non-irritating, anti-inflammatory. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Zinc Oxide. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Physical SPF and soothing. Benefit: Broad spectrum UV protection, non-irritating, anti-inflammatory. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Zinc Oxide. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Physical SPF and soothing. Benefit: Broad spectrum UV protection, non-irritating, anti-inflammatory. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Zinc Oxide. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Physical SPF and soothing. Benefit: Broad spectrum UV protection, non-irritating, anti-inflammatory. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Zinc Oxide. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Physical SPF and soothing. Benefit: Broad spectrum UV protection, non-irritating, anti-inflammatory. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Zinc Oxide. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Physical SPF and soothing. Benefit: Broad spectrum UV protection, non-irritating, anti-inflammatory. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Peptides. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Anti-ageing and firming. Benefit: Signal skin to produce collagen, improve firmness and elasticity. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Peptides. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Anti-ageing and firming. Benefit: Signal skin to produce collagen, improve firmness and elasticity. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Peptides. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Anti-ageing and firming. Benefit: Signal skin to produce collagen, improve firmness and elasticity. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Peptides. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Anti-ageing and firming. Benefit: Signal skin to produce collagen, improve firmness and elasticity. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Peptides. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Anti-ageing and firming. Benefit: Signal skin to produce collagen, improve firmness and elasticity. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Peptides. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Anti-ageing and firming. Benefit: Signal skin to produce collagen, improve firmness and elasticity. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Peptides. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Anti-ageing and firming. Benefit: Signal skin to produce collagen, improve firmness and elasticity. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Peptides. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Anti-ageing and firming. Benefit: Signal skin to produce collagen, improve firmness and elasticity. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Squalane. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Lightweight emollient. Benefit: Mimics skin natural oils, hydrates without clogging pores. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Squalane. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Lightweight emollient. Benefit: Mimics skin natural oils, hydrates without clogging pores. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Squalane. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Lightweight emollient. Benefit: Mimics skin natural oils, hydrates without clogging pores. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Squalane. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Lightweight emollient. Benefit: Mimics skin natural oils, hydrates without clogging pores. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Squalane. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Lightweight emollient. Benefit: Mimics skin natural oils, hydrates without clogging pores. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Squalane. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Lightweight emollient. Benefit: Mimics skin natural oils, hydrates without clogging pores. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Squalane. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Lightweight emollient. Benefit: Mimics skin natural oils, hydrates without clogging pores. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Squalane. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Lightweight emollient. Benefit: Mimics skin natural oils, hydrates without clogging pores. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Jojoba Oil. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Balancing emollient. Benefit: Closely mimics sebum, balances oil production, nourishes skin. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Jojoba Oil. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Balancing emollient. Benefit: Closely mimics sebum, balances oil production, nourishes skin. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Jojoba Oil. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Balancing emollient. Benefit: Closely mimics sebum, balances oil production, nourishes skin. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Jojoba Oil. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Balancing emollient. Benefit: Closely mimics sebum, balances oil production, nourishes skin. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Jojoba Oil. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Balancing emollient. Benefit: Closely mimics sebum, balances oil production, nourishes skin. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Jojoba Oil. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Balancing emollient. Benefit: Closely mimics sebum, balances oil production, nourishes skin. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Jojoba Oil. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Balancing emollient. Benefit: Closely mimics sebum, balances oil production, nourishes skin. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Jojoba Oil. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Balancing emollient. Benefit: Closely mimics sebum, balances oil production, nourishes skin. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Rosehip Oil. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Brightening and nourishing. Benefit: Rich in Vitamin A and C, fades scars and dark spots, nourishes skin. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Rosehip Oil. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Brightening and nourishing. Benefit: Rich in Vitamin A and C, fades scars and dark spots, nourishes skin. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Rosehip Oil. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Brightening and nourishing. Benefit: Rich in Vitamin A and C, fades scars and dark spots, nourishes skin. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Rosehip Oil. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Brightening and nourishing. Benefit: Rich in Vitamin A and C, fades scars and dark spots, nourishes skin. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Rosehip Oil. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Brightening and nourishing. Benefit: Rich in Vitamin A and C, fades scars and dark spots, nourishes skin. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Rosehip Oil. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Brightening and nourishing. Benefit: Rich in Vitamin A and C, fades scars and dark spots, nourishes skin. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Rosehip Oil. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Brightening and nourishing. Benefit: Rich in Vitamin A and C, fades scars and dark spots, nourishes skin. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Rosehip Oil. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Brightening and nourishing. Benefit: Rich in Vitamin A and C, fades scars and dark spots, nourishes skin. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Tranexamic Acid. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Brightening. Benefit: Reduces melanin production, fades dark spots and melasma. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Tranexamic Acid. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Brightening. Benefit: Reduces melanin production, fades dark spots and melasma. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Tranexamic Acid. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Brightening. Benefit: Reduces melanin production, fades dark spots and melasma. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Tranexamic Acid. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Brightening. Benefit: Reduces melanin production, fades dark spots and melasma. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Tranexamic Acid. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Brightening. Benefit: Reduces melanin production, fades dark spots and melasma. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Tranexamic Acid. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Brightening. Benefit: Reduces melanin production, fades dark spots and melasma. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Tranexamic Acid. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Brightening. Benefit: Reduces melanin production, fades dark spots and melasma. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Tranexamic Acid. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Brightening. Benefit: Reduces melanin production, fades dark spots and melasma. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Alpha Arbutin. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Brightening. Benefit: Inhibits tyrosinase enzyme to fade dark spots. Gentle and effective. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Alpha Arbutin. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Brightening. Benefit: Inhibits tyrosinase enzyme to fade dark spots. Gentle and effective. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Alpha Arbutin. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Brightening. Benefit: Inhibits tyrosinase enzyme to fade dark spots. Gentle and effective. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Alpha Arbutin. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Brightening. Benefit: Inhibits tyrosinase enzyme to fade dark spots. Gentle and effective. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Alpha Arbutin. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Brightening. Benefit: Inhibits tyrosinase enzyme to fade dark spots. Gentle and effective. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Alpha Arbutin. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Brightening. Benefit: Inhibits tyrosinase enzyme to fade dark spots. Gentle and effective. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Alpha Arbutin. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Brightening. Benefit: Inhibits tyrosinase enzyme to fade dark spots. Gentle and effective. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Alpha Arbutin. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Brightening. Benefit: Inhibits tyrosinase enzyme to fade dark spots. Gentle and effective. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Bakuchiol. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Natural retinol alternative. Benefit: Plant-based retinol alternative, anti-ageing without irritation. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Bakuchiol. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Natural retinol alternative. Benefit: Plant-based retinol alternative, anti-ageing without irritation. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Bakuchiol. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Natural retinol alternative. Benefit: Plant-based retinol alternative, anti-ageing without irritation. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Bakuchiol. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Natural retinol alternative. Benefit: Plant-based retinol alternative, anti-ageing without irritation. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Bakuchiol. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Natural retinol alternative. Benefit: Plant-based retinol alternative, anti-ageing without irritation. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Bakuchiol. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Natural retinol alternative. Benefit: Plant-based retinol alternative, anti-ageing without irritation. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Bakuchiol. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Natural retinol alternative. Benefit: Plant-based retinol alternative, anti-ageing without irritation. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Bakuchiol. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Natural retinol alternative. Benefit: Plant-based retinol alternative, anti-ageing without irritation. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Ferulic Acid. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant. Benefit: Powerful antioxidant that boosts effectiveness of Vitamins C and E. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Ferulic Acid. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant. Benefit: Powerful antioxidant that boosts effectiveness of Vitamins C and E. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Ferulic Acid. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant. Benefit: Powerful antioxidant that boosts effectiveness of Vitamins C and E. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Ferulic Acid. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant. Benefit: Powerful antioxidant that boosts effectiveness of Vitamins C and E. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Ferulic Acid. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant. Benefit: Powerful antioxidant that boosts effectiveness of Vitamins C and E. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Ferulic Acid. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant. Benefit: Powerful antioxidant that boosts effectiveness of Vitamins C and E. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Ferulic Acid. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant. Benefit: Powerful antioxidant that boosts effectiveness of Vitamins C and E. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Ferulic Acid. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant. Benefit: Powerful antioxidant that boosts effectiveness of Vitamins C and E. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Resveratrol. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant and anti-ageing. Benefit: Protects against free radicals, has anti-ageing and brightening properties. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Resveratrol. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant and anti-ageing. Benefit: Protects against free radicals, has anti-ageing and brightening properties. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Resveratrol. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant and anti-ageing. Benefit: Protects against free radicals, has anti-ageing and brightening properties. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Resveratrol. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant and anti-ageing. Benefit: Protects against free radicals, has anti-ageing and brightening properties. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Resveratrol. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant and anti-ageing. Benefit: Protects against free radicals, has anti-ageing and brightening properties. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Resveratrol. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant and anti-ageing. Benefit: Protects against free radicals, has anti-ageing and brightening properties. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Resveratrol. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant and anti-ageing. Benefit: Protects against free radicals, has anti-ageing and brightening properties. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Resveratrol. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant and anti-ageing. Benefit: Protects against free radicals, has anti-ageing and brightening properties. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Sodium Hyaluronate. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Deep hydration. Benefit: Smaller molecule than HA, penetrates deeper into skin for lasting hydration. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Sodium Hyaluronate. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Deep hydration. Benefit: Smaller molecule than HA, penetrates deeper into skin for lasting hydration. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Sodium Hyaluronate. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Deep hydration. Benefit: Smaller molecule than HA, penetrates deeper into skin for lasting hydration. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Sodium Hyaluronate. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Deep hydration. Benefit: Smaller molecule than HA, penetrates deeper into skin for lasting hydration. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Sodium Hyaluronate. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Deep hydration. Benefit: Smaller molecule than HA, penetrates deeper into skin for lasting hydration. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Sodium Hyaluronate. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Deep hydration. Benefit: Smaller molecule than HA, penetrates deeper into skin for lasting hydration. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Sodium Hyaluronate. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Deep hydration. Benefit: Smaller molecule than HA, penetrates deeper into skin for lasting hydration. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Sodium Hyaluronate. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Deep hydration. Benefit: Smaller molecule than HA, penetrates deeper into skin for lasting hydration. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Tocopherol. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant Vitamin E. Benefit: Protects skin from free radical damage, nourishes and strengthens barrier. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Tocopherol. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant Vitamin E. Benefit: Protects skin from free radical damage, nourishes and strengthens barrier. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Tocopherol. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant Vitamin E. Benefit: Protects skin from free radical damage, nourishes and strengthens barrier. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Tocopherol. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant Vitamin E. Benefit: Protects skin from free radical damage, nourishes and strengthens barrier. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Tocopherol. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant Vitamin E. Benefit: Protects skin from free radical damage, nourishes and strengthens barrier. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Tocopherol. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant Vitamin E. Benefit: Protects skin from free radical damage, nourishes and strengthens barrier. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Tocopherol. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant Vitamin E. Benefit: Protects skin from free radical damage, nourishes and strengthens barrier. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Tocopherol. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Antioxidant Vitamin E. Benefit: Protects skin from free radical damage, nourishes and strengthens barrier. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Azelaic Acid. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Multi-tasking treatment. Benefit: Reduces acne, fades dark spots, minimises pores. Very gentle acid. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Azelaic Acid. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Multi-tasking treatment. Benefit: Reduces acne, fades dark spots, minimises pores. Very gentle acid. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Azelaic Acid. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Multi-tasking treatment. Benefit: Reduces acne, fades dark spots, minimises pores. Very gentle acid. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Azelaic Acid. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Multi-tasking treatment. Benefit: Reduces acne, fades dark spots, minimises pores. Very gentle acid. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Azelaic Acid. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Multi-tasking treatment. Benefit: Reduces acne, fades dark spots, minimises pores. Very gentle acid. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Azelaic Acid. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Multi-tasking treatment. Benefit: Reduces acne, fades dark spots, minimises pores. Very gentle acid. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Azelaic Acid. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Multi-tasking treatment. Benefit: Reduces acne, fades dark spots, minimises pores. Very gentle acid. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Azelaic Acid. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Multi-tasking treatment. Benefit: Reduces acne, fades dark spots, minimises pores. Very gentle acid. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Caffeine. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Depuffing antioxidant. Benefit: Reduces puffiness and dark circles, has antioxidant protection. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Caffeine. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Depuffing antioxidant. Benefit: Reduces puffiness and dark circles, has antioxidant protection. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Caffeine. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Depuffing antioxidant. Benefit: Reduces puffiness and dark circles, has antioxidant protection. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Caffeine. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Depuffing antioxidant. Benefit: Reduces puffiness and dark circles, has antioxidant protection. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Caffeine. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Depuffing antioxidant. Benefit: Reduces puffiness and dark circles, has antioxidant protection. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Caffeine. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Depuffing antioxidant. Benefit: Reduces puffiness and dark circles, has antioxidant protection. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Caffeine. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Depuffing antioxidant. Benefit: Reduces puffiness and dark circles, has antioxidant protection. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Caffeine. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Depuffing antioxidant. Benefit: Reduces puffiness and dark circles, has antioxidant protection. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Shea Butter. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Rich emollient. Benefit: Deeply nourishing, softens dry skin, contains Vitamins A and E. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Shea Butter. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Rich emollient. Benefit: Deeply nourishing, softens dry skin, contains Vitamins A and E. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Shea Butter. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Rich emollient. Benefit: Deeply nourishing, softens dry skin, contains Vitamins A and E. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Shea Butter. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Rich emollient. Benefit: Deeply nourishing, softens dry skin, contains Vitamins A and E. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Shea Butter. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Rich emollient. Benefit: Deeply nourishing, softens dry skin, contains Vitamins A and E. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Shea Butter. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Rich emollient. Benefit: Deeply nourishing, softens dry skin, contains Vitamins A and E. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Shea Butter. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Rich emollient. Benefit: Deeply nourishing, softens dry skin, contains Vitamins A and E. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Shea Butter. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Rich emollient. Benefit: Deeply nourishing, softens dry skin, contains Vitamins A and E. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Titanium Dioxide. Skin type: Normal",
+    "output": "SAFE. Rating: Excellent. Role: Physical SPF. Benefit: Gentle broad spectrum UV protection, non-irritating sunscreen ingredient. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Titanium Dioxide. Skin type: Dry",
+    "output": "SAFE. Rating: Excellent. Role: Physical SPF. Benefit: Gentle broad spectrum UV protection, non-irritating sunscreen ingredient. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Titanium Dioxide. Skin type: Oily",
+    "output": "SAFE. Rating: Excellent. Role: Physical SPF. Benefit: Gentle broad spectrum UV protection, non-irritating sunscreen ingredient. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Titanium Dioxide. Skin type: Combination",
+    "output": "SAFE. Rating: Excellent. Role: Physical SPF. Benefit: Gentle broad spectrum UV protection, non-irritating sunscreen ingredient. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Titanium Dioxide. Skin type: Sensitive",
+    "output": "SAFE. Rating: Excellent. Role: Physical SPF. Benefit: Gentle broad spectrum UV protection, non-irritating sunscreen ingredient. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Titanium Dioxide. Skin type: Acne-Prone",
+    "output": "SAFE. Rating: Excellent. Role: Physical SPF. Benefit: Gentle broad spectrum UV protection, non-irritating sunscreen ingredient. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Titanium Dioxide. Skin type: Mature",
+    "output": "SAFE. Rating: Excellent. Role: Physical SPF. Benefit: Gentle broad spectrum UV protection, non-irritating sunscreen ingredient. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Titanium Dioxide. Skin type: Hyperpigmented",
+    "output": "SAFE. Rating: Excellent. Role: Physical SPF. Benefit: Gentle broad spectrum UV protection, non-irritating sunscreen ingredient. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Retinol. Skin type: Normal",
+    "output": "CAUTION. Severity: Medium. Concern: Anti-ageing. Note: Start at low concentration 0.025 percent, use at night only, always use SPF. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Retinol. Skin type: Dry",
+    "output": "CAUTION. Severity: Medium. Concern: Anti-ageing. Note: Start at low concentration 0.025 percent, use at night only, always use SPF. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Retinol. Skin type: Oily",
+    "output": "CAUTION. Severity: Medium. Concern: Anti-ageing. Note: Start at low concentration 0.025 percent, use at night only, always use SPF. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Retinol. Skin type: Combination",
+    "output": "CAUTION. Severity: Medium. Concern: Anti-ageing. Note: Start at low concentration 0.025 percent, use at night only, always use SPF. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Retinol. Skin type: Sensitive",
+    "output": "CAUTION. Severity: Medium. Concern: Anti-ageing. Note: Start at low concentration 0.025 percent, use at night only, always use SPF. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Retinol. Skin type: Acne-Prone",
+    "output": "CAUTION. Severity: Medium. Concern: Anti-ageing. Note: Start at low concentration 0.025 percent, use at night only, always use SPF. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Retinol. Skin type: Mature",
+    "output": "CAUTION. Severity: Medium. Concern: Anti-ageing. Note: Start at low concentration 0.025 percent, use at night only, always use SPF. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Retinol. Skin type: Hyperpigmented",
+    "output": "CAUTION. Severity: Medium. Concern: Anti-ageing. Note: Start at low concentration 0.025 percent, use at night only, always use SPF. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Salicylic Acid. Skin type: Normal",
+    "output": "CAUTION. Severity: Medium. Concern: Exfoliating acid. Note: Use maximum 2-3 times per week, always follow with moisturiser. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Salicylic Acid. Skin type: Dry",
+    "output": "CAUTION. Severity: Medium. Concern: Exfoliating acid. Note: Use maximum 2-3 times per week, always follow with moisturiser. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Salicylic Acid. Skin type: Oily",
+    "output": "CAUTION. Severity: Medium. Concern: Exfoliating acid. Note: Use maximum 2-3 times per week, always follow with moisturiser. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Salicylic Acid. Skin type: Combination",
+    "output": "CAUTION. Severity: Medium. Concern: Exfoliating acid. Note: Use maximum 2-3 times per week, always follow with moisturiser. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Salicylic Acid. Skin type: Sensitive",
+    "output": "CAUTION. Severity: Medium. Concern: Exfoliating acid. Note: Use maximum 2-3 times per week, always follow with moisturiser. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Salicylic Acid. Skin type: Acne-Prone",
+    "output": "CAUTION. Severity: Medium. Concern: Exfoliating acid. Note: Use maximum 2-3 times per week, always follow with moisturiser. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Salicylic Acid. Skin type: Mature",
+    "output": "CAUTION. Severity: Medium. Concern: Exfoliating acid. Note: Use maximum 2-3 times per week, always follow with moisturiser. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Salicylic Acid. Skin type: Hyperpigmented",
+    "output": "CAUTION. Severity: Medium. Concern: Exfoliating acid. Note: Use maximum 2-3 times per week, always follow with moisturiser. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Glycolic Acid. Skin type: Normal",
+    "output": "CAUTION. Severity: Medium. Concern: Chemical exfoliant. Note: Use at low concentration, maximum twice per week, always wear SPF next day. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Glycolic Acid. Skin type: Dry",
+    "output": "CAUTION. Severity: Medium. Concern: Chemical exfoliant. Note: Use at low concentration, maximum twice per week, always wear SPF next day. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Glycolic Acid. Skin type: Oily",
+    "output": "CAUTION. Severity: Medium. Concern: Chemical exfoliant. Note: Use at low concentration, maximum twice per week, always wear SPF next day. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Glycolic Acid. Skin type: Combination",
+    "output": "CAUTION. Severity: Medium. Concern: Chemical exfoliant. Note: Use at low concentration, maximum twice per week, always wear SPF next day. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Glycolic Acid. Skin type: Sensitive",
+    "output": "CAUTION. Severity: Medium. Concern: Chemical exfoliant. Note: Use at low concentration, maximum twice per week, always wear SPF next day. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Glycolic Acid. Skin type: Acne-Prone",
+    "output": "CAUTION. Severity: Medium. Concern: Chemical exfoliant. Note: Use at low concentration, maximum twice per week, always wear SPF next day. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Glycolic Acid. Skin type: Mature",
+    "output": "CAUTION. Severity: Medium. Concern: Chemical exfoliant. Note: Use at low concentration, maximum twice per week, always wear SPF next day. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Glycolic Acid. Skin type: Hyperpigmented",
+    "output": "CAUTION. Severity: Medium. Concern: Chemical exfoliant. Note: Use at low concentration, maximum twice per week, always wear SPF next day. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Lactic Acid. Skin type: Normal",
+    "output": "CAUTION. Severity: Low. Concern: Gentle exfoliant. Note: Gentler than glycolic acid. Exfoliates while also providing hydration. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Lactic Acid. Skin type: Dry",
+    "output": "CAUTION. Severity: Low. Concern: Gentle exfoliant. Note: Gentler than glycolic acid. Exfoliates while also providing hydration. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Lactic Acid. Skin type: Oily",
+    "output": "CAUTION. Severity: Low. Concern: Gentle exfoliant. Note: Gentler than glycolic acid. Exfoliates while also providing hydration. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Lactic Acid. Skin type: Combination",
+    "output": "CAUTION. Severity: Low. Concern: Gentle exfoliant. Note: Gentler than glycolic acid. Exfoliates while also providing hydration. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Lactic Acid. Skin type: Sensitive",
+    "output": "CAUTION. Severity: Low. Concern: Gentle exfoliant. Note: Gentler than glycolic acid. Exfoliates while also providing hydration. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Lactic Acid. Skin type: Acne-Prone",
+    "output": "CAUTION. Severity: Low. Concern: Gentle exfoliant. Note: Gentler than glycolic acid. Exfoliates while also providing hydration. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Lactic Acid. Skin type: Mature",
+    "output": "CAUTION. Severity: Low. Concern: Gentle exfoliant. Note: Gentler than glycolic acid. Exfoliates while also providing hydration. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Lactic Acid. Skin type: Hyperpigmented",
+    "output": "CAUTION. Severity: Low. Concern: Gentle exfoliant. Note: Gentler than glycolic acid. Exfoliates while also providing hydration. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Benzoyl Peroxide. Skin type: Normal",
+    "output": "CAUTION. Severity: Medium. Concern: Anti-acne treatment. Note: Use at 2.5 percent only. Can cause significant dryness and bleach fabrics. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Benzoyl Peroxide. Skin type: Dry",
+    "output": "CAUTION. Severity: Medium. Concern: Anti-acne treatment. Note: Use at 2.5 percent only. Can cause significant dryness and bleach fabrics. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Benzoyl Peroxide. Skin type: Oily",
+    "output": "CAUTION. Severity: Medium. Concern: Anti-acne treatment. Note: Use at 2.5 percent only. Can cause significant dryness and bleach fabrics. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Benzoyl Peroxide. Skin type: Combination",
+    "output": "CAUTION. Severity: Medium. Concern: Anti-acne treatment. Note: Use at 2.5 percent only. Can cause significant dryness and bleach fabrics. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Benzoyl Peroxide. Skin type: Sensitive",
+    "output": "CAUTION. Severity: Medium. Concern: Anti-acne treatment. Note: Use at 2.5 percent only. Can cause significant dryness and bleach fabrics. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Benzoyl Peroxide. Skin type: Acne-Prone",
+    "output": "CAUTION. Severity: Medium. Concern: Anti-acne treatment. Note: Use at 2.5 percent only. Can cause significant dryness and bleach fabrics. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Benzoyl Peroxide. Skin type: Mature",
+    "output": "CAUTION. Severity: Medium. Concern: Anti-acne treatment. Note: Use at 2.5 percent only. Can cause significant dryness and bleach fabrics. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Benzoyl Peroxide. Skin type: Hyperpigmented",
+    "output": "CAUTION. Severity: Medium. Concern: Anti-acne treatment. Note: Use at 2.5 percent only. Can cause significant dryness and bleach fabrics. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Kojic Acid. Skin type: Normal",
+    "output": "CAUTION. Severity: Low. Concern: Brightening. Note: Effective brightener but can cause sensitivity. Patch test before use. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Kojic Acid. Skin type: Dry",
+    "output": "CAUTION. Severity: Low. Concern: Brightening. Note: Effective brightener but can cause sensitivity. Patch test before use. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Kojic Acid. Skin type: Oily",
+    "output": "CAUTION. Severity: Low. Concern: Brightening. Note: Effective brightener but can cause sensitivity. Patch test before use. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Kojic Acid. Skin type: Combination",
+    "output": "CAUTION. Severity: Low. Concern: Brightening. Note: Effective brightener but can cause sensitivity. Patch test before use. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Kojic Acid. Skin type: Sensitive",
+    "output": "CAUTION. Severity: Low. Concern: Brightening. Note: Effective brightener but can cause sensitivity. Patch test before use. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Kojic Acid. Skin type: Acne-Prone",
+    "output": "CAUTION. Severity: Low. Concern: Brightening. Note: Effective brightener but can cause sensitivity. Patch test before use. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Kojic Acid. Skin type: Mature",
+    "output": "CAUTION. Severity: Low. Concern: Brightening. Note: Effective brightener but can cause sensitivity. Patch test before use. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Kojic Acid. Skin type: Hyperpigmented",
+    "output": "CAUTION. Severity: Low. Concern: Brightening. Note: Effective brightener but can cause sensitivity. Patch test before use. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Vitamin C. Skin type: Normal",
+    "output": "CAUTION. Severity: Low. Concern: Antioxidant brightening. Note: Use stabilised forms. High concentrations can irritate some skin types. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Vitamin C. Skin type: Dry",
+    "output": "CAUTION. Severity: Low. Concern: Antioxidant brightening. Note: Use stabilised forms. High concentrations can irritate some skin types. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Vitamin C. Skin type: Oily",
+    "output": "CAUTION. Severity: Low. Concern: Antioxidant brightening. Note: Use stabilised forms. High concentrations can irritate some skin types. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Vitamin C. Skin type: Combination",
+    "output": "CAUTION. Severity: Low. Concern: Antioxidant brightening. Note: Use stabilised forms. High concentrations can irritate some skin types. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Vitamin C. Skin type: Sensitive",
+    "output": "CAUTION. Severity: Low. Concern: Antioxidant brightening. Note: Use stabilised forms. High concentrations can irritate some skin types. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Vitamin C. Skin type: Acne-Prone",
+    "output": "CAUTION. Severity: Low. Concern: Antioxidant brightening. Note: Use stabilised forms. High concentrations can irritate some skin types. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Vitamin C. Skin type: Mature",
+    "output": "CAUTION. Severity: Low. Concern: Antioxidant brightening. Note: Use stabilised forms. High concentrations can irritate some skin types. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Vitamin C. Skin type: Hyperpigmented",
+    "output": "CAUTION. Severity: Low. Concern: Antioxidant brightening. Note: Use stabilised forms. High concentrations can irritate some skin types. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Alcohol Denat. Skin type: Normal",
+    "output": "CAUTION. Severity: Medium. Concern: Solvent. Note: Dries skin and disrupts barrier over time. Causes rebound oil production. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Alcohol Denat. Skin type: Dry",
+    "output": "CAUTION. Severity: Medium. Concern: Solvent. Note: Dries skin and disrupts barrier over time. Causes rebound oil production. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Alcohol Denat. Skin type: Oily",
+    "output": "CAUTION. Severity: Medium. Concern: Solvent. Note: Dries skin and disrupts barrier over time. Causes rebound oil production. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Alcohol Denat. Skin type: Combination",
+    "output": "CAUTION. Severity: Medium. Concern: Solvent. Note: Dries skin and disrupts barrier over time. Causes rebound oil production. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Alcohol Denat. Skin type: Sensitive",
+    "output": "CAUTION. Severity: Medium. Concern: Solvent. Note: Dries skin and disrupts barrier over time. Causes rebound oil production. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Alcohol Denat. Skin type: Acne-Prone",
+    "output": "CAUTION. Severity: Medium. Concern: Solvent. Note: Dries skin and disrupts barrier over time. Causes rebound oil production. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Alcohol Denat. Skin type: Mature",
+    "output": "CAUTION. Severity: Medium. Concern: Solvent. Note: Dries skin and disrupts barrier over time. Causes rebound oil production. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Alcohol Denat. Skin type: Hyperpigmented",
+    "output": "CAUTION. Severity: Medium. Concern: Solvent. Note: Dries skin and disrupts barrier over time. Causes rebound oil production. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Mineral Oil. Skin type: Normal",
+    "output": "CAUTION. Severity: Low. Concern: Occlusive. Note: Forms film on skin. Can feel heavy and may not suit all skin types. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Mineral Oil. Skin type: Dry",
+    "output": "CAUTION. Severity: Low. Concern: Occlusive. Note: Forms film on skin. Can feel heavy and may not suit all skin types. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Mineral Oil. Skin type: Oily",
+    "output": "CAUTION. Severity: Low. Concern: Occlusive. Note: Forms film on skin. Can feel heavy and may not suit all skin types. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Mineral Oil. Skin type: Combination",
+    "output": "CAUTION. Severity: Low. Concern: Occlusive. Note: Forms film on skin. Can feel heavy and may not suit all skin types. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Mineral Oil. Skin type: Sensitive",
+    "output": "CAUTION. Severity: Low. Concern: Occlusive. Note: Forms film on skin. Can feel heavy and may not suit all skin types. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Mineral Oil. Skin type: Acne-Prone",
+    "output": "CAUTION. Severity: Low. Concern: Occlusive. Note: Forms film on skin. Can feel heavy and may not suit all skin types. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Mineral Oil. Skin type: Mature",
+    "output": "CAUTION. Severity: Low. Concern: Occlusive. Note: Forms film on skin. Can feel heavy and may not suit all skin types. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Mineral Oil. Skin type: Hyperpigmented",
+    "output": "CAUTION. Severity: Low. Concern: Occlusive. Note: Forms film on skin. Can feel heavy and may not suit all skin types. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Petrolatum. Skin type: Normal",
+    "output": "CAUTION. Severity: Low. Concern: Occlusive moisturiser. Note: Very effective moisture barrier but extremely heavy texture. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Petrolatum. Skin type: Dry",
+    "output": "CAUTION. Severity: Low. Concern: Occlusive moisturiser. Note: Very effective moisture barrier but extremely heavy texture. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Petrolatum. Skin type: Oily",
+    "output": "CAUTION. Severity: Low. Concern: Occlusive moisturiser. Note: Very effective moisture barrier but extremely heavy texture. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Petrolatum. Skin type: Combination",
+    "output": "CAUTION. Severity: Low. Concern: Occlusive moisturiser. Note: Very effective moisture barrier but extremely heavy texture. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Petrolatum. Skin type: Sensitive",
+    "output": "CAUTION. Severity: Low. Concern: Occlusive moisturiser. Note: Very effective moisture barrier but extremely heavy texture. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Petrolatum. Skin type: Acne-Prone",
+    "output": "CAUTION. Severity: Low. Concern: Occlusive moisturiser. Note: Very effective moisture barrier but extremely heavy texture. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Petrolatum. Skin type: Mature",
+    "output": "CAUTION. Severity: Low. Concern: Occlusive moisturiser. Note: Very effective moisture barrier but extremely heavy texture. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Petrolatum. Skin type: Hyperpigmented",
+    "output": "CAUTION. Severity: Low. Concern: Occlusive moisturiser. Note: Very effective moisture barrier but extremely heavy texture. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Phenoxyethanol. Skin type: Normal",
+    "output": "CAUTION. Severity: Low. Concern: Preservative. Note: Generally safe preservative but can cause mild irritation in very sensitive skin. Well tolerated by normal balanced skin."
+  },
+  {
+    "input": "Ingredient: Phenoxyethanol. Skin type: Dry",
+    "output": "CAUTION. Severity: Low. Concern: Preservative. Note: Generally safe preservative but can cause mild irritation in very sensitive skin. Use with a rich moisturiser to prevent dryness."
+  },
+  {
+    "input": "Ingredient: Phenoxyethanol. Skin type: Oily",
+    "output": "CAUTION. Severity: Low. Concern: Preservative. Note: Generally safe preservative but can cause mild irritation in very sensitive skin. Suitable for oily skin without causing excess oil."
+  },
+  {
+    "input": "Ingredient: Phenoxyethanol. Skin type: Combination",
+    "output": "CAUTION. Severity: Low. Concern: Preservative. Note: Generally safe preservative but can cause mild irritation in very sensitive skin. Appropriate for combination skin zones."
+  },
+  {
+    "input": "Ingredient: Phenoxyethanol. Skin type: Sensitive",
+    "output": "CAUTION. Severity: Low. Concern: Preservative. Note: Generally safe preservative but can cause mild irritation in very sensitive skin. Patch test first. Sensitive skin may react."
+  },
+  {
+    "input": "Ingredient: Phenoxyethanol. Skin type: Acne-Prone",
+    "output": "CAUTION. Severity: Low. Concern: Preservative. Note: Generally safe preservative but can cause mild irritation in very sensitive skin. Non-comedogenic and safe for acne-prone skin."
+  },
+  {
+    "input": "Ingredient: Phenoxyethanol. Skin type: Mature",
+    "output": "CAUTION. Severity: Low. Concern: Preservative. Note: Generally safe preservative but can cause mild irritation in very sensitive skin. Beneficial for mature skin when used correctly."
+  },
+  {
+    "input": "Ingredient: Phenoxyethanol. Skin type: Hyperpigmented",
+    "output": "CAUTION. Severity: Low. Concern: Preservative. Note: Generally safe preservative but can cause mild irritation in very sensitive skin. Supports brightening goals for hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Fragrance. Skin type: Normal",
+    "output": "HARMFUL. Severity: High. Concern: Masking agent. Risk: Hides up to 300 undisclosed chemicals. Top cause of contact dermatitis. Avoid for Normal skin."
+  },
+  {
+    "input": "Ingredient: Fragrance. Skin type: Dry",
+    "output": "HARMFUL. Severity: High. Concern: Masking agent. Risk: Hides up to 300 undisclosed chemicals. Top cause of contact dermatitis. Avoid for Dry skin."
+  },
+  {
+    "input": "Ingredient: Fragrance. Skin type: Oily",
+    "output": "HARMFUL. Severity: High. Concern: Masking agent. Risk: Hides up to 300 undisclosed chemicals. Top cause of contact dermatitis. Avoid for Oily skin."
+  },
+  {
+    "input": "Ingredient: Fragrance. Skin type: Combination",
+    "output": "HARMFUL. Severity: High. Concern: Masking agent. Risk: Hides up to 300 undisclosed chemicals. Top cause of contact dermatitis. Avoid for Combination skin."
+  },
+  {
+    "input": "Ingredient: Fragrance. Skin type: Sensitive",
+    "output": "HARMFUL. Severity: High. Concern: Masking agent. Risk: Hides up to 300 undisclosed chemicals. Top cause of contact dermatitis. Avoid for Sensitive skin."
+  },
+  {
+    "input": "Ingredient: Fragrance. Skin type: Acne-Prone",
+    "output": "HARMFUL. Severity: High. Concern: Masking agent. Risk: Hides up to 300 undisclosed chemicals. Top cause of contact dermatitis. Avoid for Acne-Prone skin."
+  },
+  {
+    "input": "Ingredient: Fragrance. Skin type: Mature",
+    "output": "HARMFUL. Severity: High. Concern: Masking agent. Risk: Hides up to 300 undisclosed chemicals. Top cause of contact dermatitis. Avoid for Mature skin."
+  },
+  {
+    "input": "Ingredient: Fragrance. Skin type: Hyperpigmented",
+    "output": "HARMFUL. Severity: High. Concern: Masking agent. Risk: Hides up to 300 undisclosed chemicals. Top cause of contact dermatitis. Avoid for Hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Parfum. Skin type: Normal",
+    "output": "HARMFUL. Severity: High. Concern: Masking agent. Risk: Same as Fragrance. Hidden chemical mixture with major allergen potential. Avoid for Normal skin."
+  },
+  {
+    "input": "Ingredient: Parfum. Skin type: Dry",
+    "output": "HARMFUL. Severity: High. Concern: Masking agent. Risk: Same as Fragrance. Hidden chemical mixture with major allergen potential. Avoid for Dry skin."
+  },
+  {
+    "input": "Ingredient: Parfum. Skin type: Oily",
+    "output": "HARMFUL. Severity: High. Concern: Masking agent. Risk: Same as Fragrance. Hidden chemical mixture with major allergen potential. Avoid for Oily skin."
+  },
+  {
+    "input": "Ingredient: Parfum. Skin type: Combination",
+    "output": "HARMFUL. Severity: High. Concern: Masking agent. Risk: Same as Fragrance. Hidden chemical mixture with major allergen potential. Avoid for Combination skin."
+  },
+  {
+    "input": "Ingredient: Parfum. Skin type: Sensitive",
+    "output": "HARMFUL. Severity: High. Concern: Masking agent. Risk: Same as Fragrance. Hidden chemical mixture with major allergen potential. Avoid for Sensitive skin."
+  },
+  {
+    "input": "Ingredient: Parfum. Skin type: Acne-Prone",
+    "output": "HARMFUL. Severity: High. Concern: Masking agent. Risk: Same as Fragrance. Hidden chemical mixture with major allergen potential. Avoid for Acne-Prone skin."
+  },
+  {
+    "input": "Ingredient: Parfum. Skin type: Mature",
+    "output": "HARMFUL. Severity: High. Concern: Masking agent. Risk: Same as Fragrance. Hidden chemical mixture with major allergen potential. Avoid for Mature skin."
+  },
+  {
+    "input": "Ingredient: Parfum. Skin type: Hyperpigmented",
+    "output": "HARMFUL. Severity: High. Concern: Masking agent. Risk: Same as Fragrance. Hidden chemical mixture with major allergen potential. Avoid for Hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Methylparaben. Skin type: Normal",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Paraben preservative linked to hormonal disruption and oestrogenic activity. Avoid for Normal skin."
+  },
+  {
+    "input": "Ingredient: Methylparaben. Skin type: Dry",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Paraben preservative linked to hormonal disruption and oestrogenic activity. Avoid for Dry skin."
+  },
+  {
+    "input": "Ingredient: Methylparaben. Skin type: Oily",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Paraben preservative linked to hormonal disruption and oestrogenic activity. Avoid for Oily skin."
+  },
+  {
+    "input": "Ingredient: Methylparaben. Skin type: Combination",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Paraben preservative linked to hormonal disruption and oestrogenic activity. Avoid for Combination skin."
+  },
+  {
+    "input": "Ingredient: Methylparaben. Skin type: Sensitive",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Paraben preservative linked to hormonal disruption and oestrogenic activity. Avoid for Sensitive skin."
+  },
+  {
+    "input": "Ingredient: Methylparaben. Skin type: Acne-Prone",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Paraben preservative linked to hormonal disruption and oestrogenic activity. Avoid for Acne-Prone skin."
+  },
+  {
+    "input": "Ingredient: Methylparaben. Skin type: Mature",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Paraben preservative linked to hormonal disruption and oestrogenic activity. Avoid for Mature skin."
+  },
+  {
+    "input": "Ingredient: Methylparaben. Skin type: Hyperpigmented",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Paraben preservative linked to hormonal disruption and oestrogenic activity. Avoid for Hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Propylparaben. Skin type: Normal",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Stronger oestrogenic activity than methylparaben. Linked to endocrine disruption. Avoid for Normal skin."
+  },
+  {
+    "input": "Ingredient: Propylparaben. Skin type: Dry",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Stronger oestrogenic activity than methylparaben. Linked to endocrine disruption. Avoid for Dry skin."
+  },
+  {
+    "input": "Ingredient: Propylparaben. Skin type: Oily",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Stronger oestrogenic activity than methylparaben. Linked to endocrine disruption. Avoid for Oily skin."
+  },
+  {
+    "input": "Ingredient: Propylparaben. Skin type: Combination",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Stronger oestrogenic activity than methylparaben. Linked to endocrine disruption. Avoid for Combination skin."
+  },
+  {
+    "input": "Ingredient: Propylparaben. Skin type: Sensitive",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Stronger oestrogenic activity than methylparaben. Linked to endocrine disruption. Avoid for Sensitive skin."
+  },
+  {
+    "input": "Ingredient: Propylparaben. Skin type: Acne-Prone",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Stronger oestrogenic activity than methylparaben. Linked to endocrine disruption. Avoid for Acne-Prone skin."
+  },
+  {
+    "input": "Ingredient: Propylparaben. Skin type: Mature",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Stronger oestrogenic activity than methylparaben. Linked to endocrine disruption. Avoid for Mature skin."
+  },
+  {
+    "input": "Ingredient: Propylparaben. Skin type: Hyperpigmented",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Stronger oestrogenic activity than methylparaben. Linked to endocrine disruption. Avoid for Hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Butylparaben. Skin type: Normal",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Most potent paraben. Strong oestrogenic activity. Avoid completely. Avoid for Normal skin."
+  },
+  {
+    "input": "Ingredient: Butylparaben. Skin type: Dry",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Most potent paraben. Strong oestrogenic activity. Avoid completely. Avoid for Dry skin."
+  },
+  {
+    "input": "Ingredient: Butylparaben. Skin type: Oily",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Most potent paraben. Strong oestrogenic activity. Avoid completely. Avoid for Oily skin."
+  },
+  {
+    "input": "Ingredient: Butylparaben. Skin type: Combination",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Most potent paraben. Strong oestrogenic activity. Avoid completely. Avoid for Combination skin."
+  },
+  {
+    "input": "Ingredient: Butylparaben. Skin type: Sensitive",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Most potent paraben. Strong oestrogenic activity. Avoid completely. Avoid for Sensitive skin."
+  },
+  {
+    "input": "Ingredient: Butylparaben. Skin type: Acne-Prone",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Most potent paraben. Strong oestrogenic activity. Avoid completely. Avoid for Acne-Prone skin."
+  },
+  {
+    "input": "Ingredient: Butylparaben. Skin type: Mature",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Most potent paraben. Strong oestrogenic activity. Avoid completely. Avoid for Mature skin."
+  },
+  {
+    "input": "Ingredient: Butylparaben. Skin type: Hyperpigmented",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Most potent paraben. Strong oestrogenic activity. Avoid completely. Avoid for Hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Sodium Lauryl Sulfate. Skin type: Normal",
+    "output": "HARMFUL. Severity: High. Concern: Surfactant. Risk: Destroys skin barrier, strips natural oils, causes severe irritation. Avoid for Normal skin."
+  },
+  {
+    "input": "Ingredient: Sodium Lauryl Sulfate. Skin type: Dry",
+    "output": "HARMFUL. Severity: High. Concern: Surfactant. Risk: Destroys skin barrier, strips natural oils, causes severe irritation. Avoid for Dry skin."
+  },
+  {
+    "input": "Ingredient: Sodium Lauryl Sulfate. Skin type: Oily",
+    "output": "HARMFUL. Severity: High. Concern: Surfactant. Risk: Destroys skin barrier, strips natural oils, causes severe irritation. Avoid for Oily skin."
+  },
+  {
+    "input": "Ingredient: Sodium Lauryl Sulfate. Skin type: Combination",
+    "output": "HARMFUL. Severity: High. Concern: Surfactant. Risk: Destroys skin barrier, strips natural oils, causes severe irritation. Avoid for Combination skin."
+  },
+  {
+    "input": "Ingredient: Sodium Lauryl Sulfate. Skin type: Sensitive",
+    "output": "HARMFUL. Severity: High. Concern: Surfactant. Risk: Destroys skin barrier, strips natural oils, causes severe irritation. Avoid for Sensitive skin."
+  },
+  {
+    "input": "Ingredient: Sodium Lauryl Sulfate. Skin type: Acne-Prone",
+    "output": "HARMFUL. Severity: High. Concern: Surfactant. Risk: Destroys skin barrier, strips natural oils, causes severe irritation. Avoid for Acne-Prone skin."
+  },
+  {
+    "input": "Ingredient: Sodium Lauryl Sulfate. Skin type: Mature",
+    "output": "HARMFUL. Severity: High. Concern: Surfactant. Risk: Destroys skin barrier, strips natural oils, causes severe irritation. Avoid for Mature skin."
+  },
+  {
+    "input": "Ingredient: Sodium Lauryl Sulfate. Skin type: Hyperpigmented",
+    "output": "HARMFUL. Severity: High. Concern: Surfactant. Risk: Destroys skin barrier, strips natural oils, causes severe irritation. Avoid for Hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: DMDM Hydantoin. Skin type: Normal",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Releases formaldehyde. Known carcinogen and major allergen. Avoid for Normal skin."
+  },
+  {
+    "input": "Ingredient: DMDM Hydantoin. Skin type: Dry",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Releases formaldehyde. Known carcinogen and major allergen. Avoid for Dry skin."
+  },
+  {
+    "input": "Ingredient: DMDM Hydantoin. Skin type: Oily",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Releases formaldehyde. Known carcinogen and major allergen. Avoid for Oily skin."
+  },
+  {
+    "input": "Ingredient: DMDM Hydantoin. Skin type: Combination",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Releases formaldehyde. Known carcinogen and major allergen. Avoid for Combination skin."
+  },
+  {
+    "input": "Ingredient: DMDM Hydantoin. Skin type: Sensitive",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Releases formaldehyde. Known carcinogen and major allergen. Avoid for Sensitive skin."
+  },
+  {
+    "input": "Ingredient: DMDM Hydantoin. Skin type: Acne-Prone",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Releases formaldehyde. Known carcinogen and major allergen. Avoid for Acne-Prone skin."
+  },
+  {
+    "input": "Ingredient: DMDM Hydantoin. Skin type: Mature",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Releases formaldehyde. Known carcinogen and major allergen. Avoid for Mature skin."
+  },
+  {
+    "input": "Ingredient: DMDM Hydantoin. Skin type: Hyperpigmented",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Releases formaldehyde. Known carcinogen and major allergen. Avoid for Hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Imidazolidinyl Urea. Skin type: Normal",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Formaldehyde-releasing preservative. Carcinogen and contact allergen. Avoid for Normal skin."
+  },
+  {
+    "input": "Ingredient: Imidazolidinyl Urea. Skin type: Dry",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Formaldehyde-releasing preservative. Carcinogen and contact allergen. Avoid for Dry skin."
+  },
+  {
+    "input": "Ingredient: Imidazolidinyl Urea. Skin type: Oily",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Formaldehyde-releasing preservative. Carcinogen and contact allergen. Avoid for Oily skin."
+  },
+  {
+    "input": "Ingredient: Imidazolidinyl Urea. Skin type: Combination",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Formaldehyde-releasing preservative. Carcinogen and contact allergen. Avoid for Combination skin."
+  },
+  {
+    "input": "Ingredient: Imidazolidinyl Urea. Skin type: Sensitive",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Formaldehyde-releasing preservative. Carcinogen and contact allergen. Avoid for Sensitive skin."
+  },
+  {
+    "input": "Ingredient: Imidazolidinyl Urea. Skin type: Acne-Prone",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Formaldehyde-releasing preservative. Carcinogen and contact allergen. Avoid for Acne-Prone skin."
+  },
+  {
+    "input": "Ingredient: Imidazolidinyl Urea. Skin type: Mature",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Formaldehyde-releasing preservative. Carcinogen and contact allergen. Avoid for Mature skin."
+  },
+  {
+    "input": "Ingredient: Imidazolidinyl Urea. Skin type: Hyperpigmented",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Formaldehyde-releasing preservative. Carcinogen and contact allergen. Avoid for Hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Oxybenzone. Skin type: Normal",
+    "output": "HARMFUL. Severity: High. Concern: Chemical sunscreen. Risk: Penetrates skin, disrupts hormones. Linked to endocrine disruption. Avoid. Avoid for Normal skin."
+  },
+  {
+    "input": "Ingredient: Oxybenzone. Skin type: Dry",
+    "output": "HARMFUL. Severity: High. Concern: Chemical sunscreen. Risk: Penetrates skin, disrupts hormones. Linked to endocrine disruption. Avoid. Avoid for Dry skin."
+  },
+  {
+    "input": "Ingredient: Oxybenzone. Skin type: Oily",
+    "output": "HARMFUL. Severity: High. Concern: Chemical sunscreen. Risk: Penetrates skin, disrupts hormones. Linked to endocrine disruption. Avoid. Avoid for Oily skin."
+  },
+  {
+    "input": "Ingredient: Oxybenzone. Skin type: Combination",
+    "output": "HARMFUL. Severity: High. Concern: Chemical sunscreen. Risk: Penetrates skin, disrupts hormones. Linked to endocrine disruption. Avoid. Avoid for Combination skin."
+  },
+  {
+    "input": "Ingredient: Oxybenzone. Skin type: Sensitive",
+    "output": "HARMFUL. Severity: High. Concern: Chemical sunscreen. Risk: Penetrates skin, disrupts hormones. Linked to endocrine disruption. Avoid. Avoid for Sensitive skin."
+  },
+  {
+    "input": "Ingredient: Oxybenzone. Skin type: Acne-Prone",
+    "output": "HARMFUL. Severity: High. Concern: Chemical sunscreen. Risk: Penetrates skin, disrupts hormones. Linked to endocrine disruption. Avoid. Avoid for Acne-Prone skin."
+  },
+  {
+    "input": "Ingredient: Oxybenzone. Skin type: Mature",
+    "output": "HARMFUL. Severity: High. Concern: Chemical sunscreen. Risk: Penetrates skin, disrupts hormones. Linked to endocrine disruption. Avoid. Avoid for Mature skin."
+  },
+  {
+    "input": "Ingredient: Oxybenzone. Skin type: Hyperpigmented",
+    "output": "HARMFUL. Severity: High. Concern: Chemical sunscreen. Risk: Penetrates skin, disrupts hormones. Linked to endocrine disruption. Avoid. Avoid for Hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Triclosan. Skin type: Normal",
+    "output": "HARMFUL. Severity: High. Concern: Antibacterial. Risk: Banned in many countries. Disrupts hormones, causes antibiotic resistance. Avoid for Normal skin."
+  },
+  {
+    "input": "Ingredient: Triclosan. Skin type: Dry",
+    "output": "HARMFUL. Severity: High. Concern: Antibacterial. Risk: Banned in many countries. Disrupts hormones, causes antibiotic resistance. Avoid for Dry skin."
+  },
+  {
+    "input": "Ingredient: Triclosan. Skin type: Oily",
+    "output": "HARMFUL. Severity: High. Concern: Antibacterial. Risk: Banned in many countries. Disrupts hormones, causes antibiotic resistance. Avoid for Oily skin."
+  },
+  {
+    "input": "Ingredient: Triclosan. Skin type: Combination",
+    "output": "HARMFUL. Severity: High. Concern: Antibacterial. Risk: Banned in many countries. Disrupts hormones, causes antibiotic resistance. Avoid for Combination skin."
+  },
+  {
+    "input": "Ingredient: Triclosan. Skin type: Sensitive",
+    "output": "HARMFUL. Severity: High. Concern: Antibacterial. Risk: Banned in many countries. Disrupts hormones, causes antibiotic resistance. Avoid for Sensitive skin."
+  },
+  {
+    "input": "Ingredient: Triclosan. Skin type: Acne-Prone",
+    "output": "HARMFUL. Severity: High. Concern: Antibacterial. Risk: Banned in many countries. Disrupts hormones, causes antibiotic resistance. Avoid for Acne-Prone skin."
+  },
+  {
+    "input": "Ingredient: Triclosan. Skin type: Mature",
+    "output": "HARMFUL. Severity: High. Concern: Antibacterial. Risk: Banned in many countries. Disrupts hormones, causes antibiotic resistance. Avoid for Mature skin."
+  },
+  {
+    "input": "Ingredient: Triclosan. Skin type: Hyperpigmented",
+    "output": "HARMFUL. Severity: High. Concern: Antibacterial. Risk: Banned in many countries. Disrupts hormones, causes antibiotic resistance. Avoid for Hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Toluene. Skin type: Normal",
+    "output": "HARMFUL. Severity: High. Concern: Solvent. Risk: Toxic solvent linked to nervous system damage. Banned in EU cosmetics. Avoid for Normal skin."
+  },
+  {
+    "input": "Ingredient: Toluene. Skin type: Dry",
+    "output": "HARMFUL. Severity: High. Concern: Solvent. Risk: Toxic solvent linked to nervous system damage. Banned in EU cosmetics. Avoid for Dry skin."
+  },
+  {
+    "input": "Ingredient: Toluene. Skin type: Oily",
+    "output": "HARMFUL. Severity: High. Concern: Solvent. Risk: Toxic solvent linked to nervous system damage. Banned in EU cosmetics. Avoid for Oily skin."
+  },
+  {
+    "input": "Ingredient: Toluene. Skin type: Combination",
+    "output": "HARMFUL. Severity: High. Concern: Solvent. Risk: Toxic solvent linked to nervous system damage. Banned in EU cosmetics. Avoid for Combination skin."
+  },
+  {
+    "input": "Ingredient: Toluene. Skin type: Sensitive",
+    "output": "HARMFUL. Severity: High. Concern: Solvent. Risk: Toxic solvent linked to nervous system damage. Banned in EU cosmetics. Avoid for Sensitive skin."
+  },
+  {
+    "input": "Ingredient: Toluene. Skin type: Acne-Prone",
+    "output": "HARMFUL. Severity: High. Concern: Solvent. Risk: Toxic solvent linked to nervous system damage. Banned in EU cosmetics. Avoid for Acne-Prone skin."
+  },
+  {
+    "input": "Ingredient: Toluene. Skin type: Mature",
+    "output": "HARMFUL. Severity: High. Concern: Solvent. Risk: Toxic solvent linked to nervous system damage. Banned in EU cosmetics. Avoid for Mature skin."
+  },
+  {
+    "input": "Ingredient: Toluene. Skin type: Hyperpigmented",
+    "output": "HARMFUL. Severity: High. Concern: Solvent. Risk: Toxic solvent linked to nervous system damage. Banned in EU cosmetics. Avoid for Hyperpigmented skin."
+  },
+  {
+    "input": "Ingredient: Formaldehyde. Skin type: Normal",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Known human carcinogen. Causes allergic reactions and respiratory issues. Avoid for Normal skin."
+  },
+  {
+    "input": "Ingredient: Formaldehyde. Skin type: Dry",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Known human carcinogen. Causes allergic reactions and respiratory issues. Avoid for Dry skin."
+  },
+  {
+    "input": "Ingredient: Formaldehyde. Skin type: Oily",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Known human carcinogen. Causes allergic reactions and respiratory issues. Avoid for Oily skin."
+  },
+  {
+    "input": "Ingredient: Formaldehyde. Skin type: Combination",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Known human carcinogen. Causes allergic reactions and respiratory issues. Avoid for Combination skin."
+  },
+  {
+    "input": "Ingredient: Formaldehyde. Skin type: Sensitive",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Known human carcinogen. Causes allergic reactions and respiratory issues. Avoid for Sensitive skin."
+  },
+  {
+    "input": "Ingredient: Formaldehyde. Skin type: Acne-Prone",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Known human carcinogen. Causes allergic reactions and respiratory issues. Avoid for Acne-Prone skin."
+  },
+  {
+    "input": "Ingredient: Formaldehyde. Skin type: Mature",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Known human carcinogen. Causes allergic reactions and respiratory issues. Avoid for Mature skin."
+  },
+  {
+    "input": "Ingredient: Formaldehyde. Skin type: Hyperpigmented",
+    "output": "HARMFUL. Severity: High. Concern: Preservative. Risk: Known human carcinogen. Causes allergic reactions and respiratory issues. Avoid for Hyperpigmented skin."
+  }
+]

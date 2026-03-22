@@ -1,42 +1,47 @@
-/* ── DERMIQUÉ — Global Styles ── */
+/* ── DERMIQUÉ — Off-White Luxury Theme ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --obsidian:   #080808;
-  --onyx:       #0f0f0f;
-  --charcoal:   #161616;
-  --carbon:     #1e1e1e;
-  --graphite:   #2a2a2a;
-  --mist:       #3a3a3a;
-  --smoke:      rgba(255,255,255,0.06);
-  --fog:        rgba(255,255,255,0.04);
+  /* ── Warm off-white backgrounds ── */
+  --obsidian:   #f5f0e8;
+  --onyx:       #ede8dc;
+  --charcoal:   #e6dfd0;
+  --carbon:     #ddd5c4;
+  --graphite:   #d4ccb8;
+  --mist:       #c8bfaa;
+  --smoke:      rgba(138,100,24,0.06);
+  --fog:        rgba(138,100,24,0.03);
 
-  --gold:       #c9a84c;
-  --goldL:      #e4c46a;
-  --goldD:      #a8863a;
-  --goldPale:   #f5e6b8;
-  --goldSheer:  rgba(201,168,76,0.12);
-  --goldBorder: rgba(201,168,76,0.22);
-  --goldGlow:   rgba(201,168,76,0.08);
+  /* ── Deep gold for light background ── */
+  --gold:       #8a6418;
+  --goldL:      #b08030;
+  --goldD:      #6a4a10;
+  --goldPale:   #1c1008;
+  --goldSheer:  rgba(138,100,24,0.12);
+  --goldBorder: rgba(138,100,24,0.28);
+  --goldGlow:   rgba(138,100,24,0.08);
 
   --ivory:      #f8f4ec;
   --pearl:      #ede8dc;
   --parchment:  #e0d8c8;
 
-  --safe:       #7ab68a;
-  --safeGlow:   rgba(122,182,138,0.15);
-  --caution:    #d4a855;
-  --cautionGlow:rgba(212,168,85,0.15);
-  --danger:     #c47060;
-  --dangerGlow: rgba(196,112,96,0.15);
+  /* ── Status ── */
+  --safe:       #1a6b38;
+  --safeGlow:   rgba(26,107,56,0.1);
+  --caution:    #8a6418;
+  --cautionGlow:rgba(138,100,24,0.1);
+  --danger:     #8a2010;
+  --dangerGlow: rgba(138,32,16,0.1);
 
-  --text:       rgba(255,255,255,0.92);
-  --textMid:    rgba(255,255,255,0.55);
-  --textDim:    rgba(255,255,255,0.32);
-  --textFaint:  rgba(255,255,255,0.14);
+  /* ── Text — perfectly readable dark shades ── */
+  --text:       #1c1008;
+  --textMid:    #2e2010;
+  --textDim:    #5a4020;
+  --textFaint:  #8a6030;
 
+  /* ── Fonts ── */
   --font-display: 'Cinzel', serif;
-  --font-serif:   'Cormorant', serif;
+  --font-serif:   'Cormorant Garamond', serif;
   --font-body:    'Didact Gothic', sans-serif;
   --font-reading: 'EB Garamond', serif;
 
@@ -55,18 +60,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-::-webkit-scrollbar { width: 2px; }
-::-webkit-scrollbar-track { background: var(--obsidian); }
-::-webkit-scrollbar-thumb { background: var(--goldBorder); border-radius: 2px; }
+/* ── Force all text dark and readable ── */
+h1, h2, h3, h4, h5, h6 { color: #1c1008; }
+p { color: #2e2010; }
 
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--pearl); }
+::-webkit-scrollbar-thumb { background: var(--goldBorder); border-radius: 3px; }
 ::selection { background: var(--goldSheer); color: var(--goldPale); }
 
 /* ── Custom Cursor ── */
 * { cursor: none !important; }
-button, a, [role="button"], span[onClick], input, label { cursor: none !important; pointer-events: auto !important; }
+button, a, [role="button"], span[onClick], input, label {
+  cursor: none !important;
+  pointer-events: auto !important;
+}
 
 /* ── Utility ── */
-.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+}
 
 /* ── Scrollbar Firefox ── */
-* { scrollbar-width: thin; scrollbar-color: var(--goldBorder) var(--obsidian); }
+* { scrollbar-width: thin; scrollbar-color: var(--goldBorder) var(--pearl); }
