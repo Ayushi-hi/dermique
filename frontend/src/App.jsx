@@ -36,8 +36,25 @@ function LuxuryCursor() {
   const ringPos  = useRef({ x: -100, y: -100 })
   const rafRef   = useRef(null)
   const [hovering, setHovering] = useState(false)
+  const [enabled, setEnabled]   = useState(false)
 
   useEffect(() => {
+    const fine = window.matchMedia('(pointer: fine) and (hover: hover)')
+    const apply = () => {
+      const on = fine.matches
+      setEnabled(on)
+      document.body.classList.toggle('fine-cursor', on)
+    }
+    apply()
+    fine.addEventListener('change', apply)
+    return () => {
+      fine.removeEventListener('change', apply)
+      document.body.classList.remove('fine-cursor')
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!enabled) return
     const onMove = (e) => { posRef.current = { x: e.clientX, y: e.clientY } }
     const onEnter = (e) => { if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.closest('button') || e.target.closest('a')) setHovering(true) }
     const onLeave = () => setHovering(false)
@@ -67,7 +84,9 @@ function LuxuryCursor() {
       document.removeEventListener('mouseout',  onLeave)
       cancelAnimationFrame(rafRef.current)
     }
-  }, [hovering])
+  }, [hovering, enabled])
+
+  if (!enabled) return null
 
   return (
     <>
@@ -88,6 +107,7 @@ function LuxuryCursor() {
 /* ─────────────────────────── NAV ─────────────────────────── */
 function Nav({ onScanClick }) {
   const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 60)
@@ -95,55 +115,94 @@ function Nav({ onScanClick }) {
     return () => window.removeEventListener('scroll', fn)
   }, [])
 
-  return (
-    <nav style={{
-      position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000,
-      height: 72, padding: '0 48px',
-      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      background: scrolled ? 'rgba(245,240,232,0.98)' : 'transparent',
-      backdropFilter: scrolled ? 'blur(24px)' : 'none',
-      borderBottom: scrolled ? '1px solid rgba(201,168,76,0.12)' : '1px solid transparent',
-      transition: 'all 0.4s ease',
-    }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-          <circle cx="18" cy="18" r="17" stroke="#c9a84c" strokeWidth="0.8" opacity="0.6"/>
-          <path d="M18 5C13 9 9 14 10 19.5C11 25 18 29 18 29C18 29 25 25 26 19.5C27 14 23 9 18 5Z" fill="#c9a84c" opacity="0.2"/>
-          <path d="M18 5C13 9 9 14 10 19.5C11 25 18 29 18 29C18 29 25 25 26 19.5C27 14 23 9 18 5Z" stroke="#c9a84c" strokeWidth="0.8" fill="none"/>
-          <circle cx="18" cy="18" r="3.5" fill="none" stroke="#c9a84c" strokeWidth="0.8"/>
-          <circle cx="18" cy="18" r="1" fill="#c9a84c"/>
-        </svg>
-        <div>
-          <div style={{ fontFamily: 'var(--font-display)', fontSize: 18, fontWeight: 600, color: '#5a3e10', letterSpacing: '4px' }}>DERMIQUÉ</div>
-          <div style={{ fontFamily: 'var(--font-body)', fontSize: 8, color: 'rgba(201,168,76,0.5)', letterSpacing: '3.5px', textTransform: 'uppercase', marginTop: 2 }}>Luxury Ingredient Intelligence</div>
-        </div>
-      </div>
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [menuOpen])
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: 36 }}>
-        {[
-          { label: 'Our Method',   id: 'method'      },
-          { label: 'Ingredients',  id: 'ingredients' },
-          { label: 'Science',      id: 'promise'     },
-        ].map(({ label, id }) => (
-          <span key={id}
-            onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })}
-            style={{ fontFamily: 'var(--font-body)', fontSize: 11, color: '#5a4020', letterSpacing: '2px', textTransform: 'uppercase', transition: 'color 0.2s', pointerEvents: 'all' }}
-            onMouseEnter={e => e.currentTarget.style.color = '#c9a84c'}
-            onMouseLeave={e => e.currentTarget.style.color = 'rgba(30,20,10,0.48)'}
-          >{label}</span>
-        ))}
-        <button onClick={onScanClick} style={{
-          fontFamily: 'var(--font-display)', fontSize: 10, fontWeight: 500, letterSpacing: '2.5px',
-          color: '#1c1008', background: 'linear-gradient(135deg,#c9a84c,#e4c46a)',
-          border: 'none', borderRadius: 2, padding: '12px 28px',
-          boxShadow: '0 4px 20px rgba(201,168,76,0.3)',
-          transition: 'all 0.25s ease', pointerEvents: 'all',
-        }}
-          onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 32px rgba(201,168,76,0.5)'; e.currentTarget.style.transform = 'translateY(-1px)' }}
-          onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 4px 20px rgba(201,168,76,0.3)'; e.currentTarget.style.transform = 'translateY(0)' }}
-        >ANALYSE NOW</button>
-      </div>
-    </nav>
+  const scrollTo = (id) => {
+    setMenuOpen(false)
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const scan = () => {
+    setMenuOpen(false)
+    onScanClick()
+  }
+
+  const navLinks = [
+    { label: 'Our Method',  id: 'method'      },
+    { label: 'Ingredients', id: 'ingredients' },
+    { label: 'Science',     id: 'promise'     },
+  ]
+
+  const linkStyle = {
+    fontFamily: 'var(--font-body)', fontSize: 11, color: '#5a4020',
+    letterSpacing: '2px', textTransform: 'uppercase', transition: 'color 0.2s',
+    pointerEvents: 'all', cursor: 'pointer',
+  }
+
+  const ctaStyle = {
+    fontFamily: 'var(--font-display)', fontSize: 10, fontWeight: 500, letterSpacing: '2.5px',
+    color: '#1c1008', background: 'linear-gradient(135deg,#c9a84c,#e4c46a)',
+    border: 'none', borderRadius: 2, padding: '12px 28px',
+    boxShadow: '0 4px 20px rgba(201,168,76,0.3)',
+    transition: 'all 0.25s ease', pointerEvents: 'all', cursor: 'pointer',
+  }
+
+  return (
+    <>
+      <nav className="nav" style={{
+        background: scrolled || menuOpen ? 'rgba(245,240,232,0.98)' : 'transparent',
+        backdropFilter: scrolled || menuOpen ? 'blur(24px)' : 'none',
+        borderBottom: scrolled || menuOpen ? '1px solid rgba(201,168,76,0.12)' : '1px solid transparent',
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <svg width="32" height="32" viewBox="0 0 36 36" fill="none" style={{ flexShrink: 0 }}>
+            <circle cx="18" cy="18" r="17" stroke="#c9a84c" strokeWidth="0.8" opacity="0.6"/>
+            <path d="M18 5C13 9 9 14 10 19.5C11 25 18 29 18 29C18 29 25 25 26 19.5C27 14 23 9 18 5Z" fill="#c9a84c" opacity="0.2"/>
+            <path d="M18 5C13 9 9 14 10 19.5C11 25 18 29 18 29C18 29 25 25 26 19.5C27 14 23 9 18 5Z" stroke="#c9a84c" strokeWidth="0.8" fill="none"/>
+            <circle cx="18" cy="18" r="3.5" fill="none" stroke="#c9a84c" strokeWidth="0.8"/>
+            <circle cx="18" cy="18" r="1" fill="#c9a84c"/>
+          </svg>
+          <div>
+            <div className="nav-brand-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 600, color: '#5a3e10' }}>DERMIQUÉ</div>
+            <div className="nav-brand-sub" style={{ fontFamily: 'var(--font-body)', fontSize: 8, color: 'rgba(201,168,76,0.5)', letterSpacing: '3.5px', textTransform: 'uppercase', marginTop: 2 }}>Luxury Ingredient Intelligence</div>
+          </div>
+        </div>
+
+        <div className="nav-links">
+          {navLinks.map(({ label, id }) => (
+            <span key={id} onClick={() => scrollTo(id)} style={linkStyle}
+              onMouseEnter={e => e.currentTarget.style.color = '#c9a84c'}
+              onMouseLeave={e => e.currentTarget.style.color = '#5a4020'}
+            >{label}</span>
+          ))}
+          <button onClick={scan} style={ctaStyle}
+            onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 8px 32px rgba(201,168,76,0.5)'; e.currentTarget.style.transform = 'translateY(-1px)' }}
+            onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 4px 20px rgba(201,168,76,0.3)'; e.currentTarget.style.transform = 'translateY(0)' }}
+          >ANALYSE NOW</button>
+        </div>
+
+        <button
+          className={`nav-menu-btn${menuOpen ? ' open' : ''}`}
+          onClick={() => setMenuOpen(o => !o)}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+        >
+          <span /><span /><span />
+        </button>
+      </nav>
+
+      {menuOpen && (
+        <div className="nav-mobile-menu">
+          {navLinks.map(({ label, id }) => (
+            <button key={id} className="nav-mobile-link" onClick={() => scrollTo(id)}>{label}</button>
+          ))}
+          <button onClick={scan} style={{ ...ctaStyle, width: '100%', marginTop: 8 }}>ANALYSE NOW</button>
+        </div>
+      )}
+    </>
   )
 }
 
@@ -153,12 +212,7 @@ function Hero({ onScanClick }) {
   useEffect(() => { const t = setTimeout(() => setMounted(true), 100); return () => clearTimeout(t) }, [])
 
   return (
-    <section style={{
-      position: 'relative', minHeight: '100vh',
-      display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-      padding: '120px 48px 80px', overflow: 'hidden', textAlign: 'center',
-      background: 'var(--obsidian)',
-    }}>
+    <section className="hero">
       <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none' }}>
         <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-55%)', width: 600, height: 600, borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%)' }}/>
         <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.04 }} xmlns="http://www.w3.org/2000/svg">
@@ -178,14 +232,14 @@ function Hero({ onScanClick }) {
       </div>
 
       <div style={{ position: 'relative', zIndex: 2, maxWidth: 820 }}>
-        <div style={{
-          display: 'inline-flex', alignItems: 'center', gap: 12, marginBottom: 36,
+        <div className="hero-tagline" style={{
+          marginBottom: 36,
           opacity: mounted ? 1 : 0, transform: mounted ? 'translateY(0)' : 'translateY(16px)',
           transition: 'all 0.9s var(--ease-luxury)',
         }}>
-          <div style={{ height: 1, width: 40, background: 'linear-gradient(90deg,transparent,#c9a84c)' }}/>
+          <div className="line" style={{ height: 1, background: 'linear-gradient(90deg,transparent,#c9a84c)' }}/>
           <span style={{ fontFamily: 'var(--font-body)', fontSize: 10, color: '#8a6418', letterSpacing: '4px', textTransform: 'uppercase' }}>The Science of Flawless Skin</span>
-          <div style={{ height: 1, width: 40, background: 'linear-gradient(90deg,#c9a84c,transparent)' }}/>
+          <div className="line" style={{ height: 1, background: 'linear-gradient(90deg,#c9a84c,transparent)' }}/>
         </div>
 
         <h1 style={{
@@ -213,8 +267,8 @@ function Hero({ onScanClick }) {
           <div style={{ height: 1, width: 80, background: 'linear-gradient(90deg,rgba(201,168,76,0.5),transparent)' }}/>
         </div>
 
-        <p style={{
-          fontFamily: 'var(--font-reading)', fontSize: 19, fontWeight: 400,
+        <p className="hero-desc" style={{
+          fontFamily: 'var(--font-reading)', fontWeight: 400,
           color: '#5a4020', lineHeight: 1.9, maxWidth: 620, margin: '0 auto 52px',
           opacity: mounted ? 1 : 0, transform: mounted ? 'translateY(0)' : 'translateY(16px)',
           transition: 'all 1s var(--ease-luxury) 0.35s',
@@ -224,7 +278,7 @@ function Hero({ onScanClick }) {
           <em>personalised verdict</em> crafted for your unique skin.
         </p>
 
-        <div style={{
+        <div className="hero-btns" style={{
           display: 'flex', justifyContent: 'center', gap: 16, flexWrap: 'wrap',
           opacity: mounted ? 1 : 0, transform: mounted ? 'translateY(0)' : 'translateY(16px)',
           transition: 'all 1s var(--ease-luxury) 0.45s',
@@ -233,8 +287,8 @@ function Hero({ onScanClick }) {
           <OutlineButton onClick={() => document.getElementById('method').scrollIntoView({ behavior: 'smooth' })}>Discover Our Method</OutlineButton>
         </div>
 
-        <div style={{
-          display: 'flex', justifyContent: 'center', gap: 32, marginTop: 56, flexWrap: 'wrap',
+        <div className="hero-stats" style={{
+          display: 'flex', justifyContent: 'center', marginTop: 56, flexWrap: 'wrap',
           opacity: mounted ? 0.6 : 0, transition: 'opacity 1.2s ease 0.6s',
         }}>
           {[
@@ -262,16 +316,16 @@ function Hero({ onScanClick }) {
 /* ─────────────────────────── METHOD SECTION ─────────────────────────── */
 function MethodSection() {
   return (
-    <section id="method" style={{ padding: '120px 48px', background: 'var(--onyx)', borderTop: '1px solid rgba(201,168,76,0.08)', borderBottom: '1px solid rgba(201,168,76,0.08)' }}>
+    <section id="method" className="section-pad" style={{ background: 'var(--onyx)', borderTop: '1px solid rgba(201,168,76,0.08)', borderBottom: '1px solid rgba(201,168,76,0.08)' }}>
       <div style={{ maxWidth: 1080, margin: '0 auto' }}>
         <SectionHeader label="The Dermiqué Method" title="Three Steps to Total Clarity" />
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 2, marginTop: 64 }}>
+        <div className="grid-3" style={{ marginTop: 64 }}>
           {[
             { n: 'I', title: 'Profile Your Skin', desc: 'Select from eight clinically-defined skin profiles. Every analysis is calibrated to your specific skin biology — not a generic assessment.', icon: (<svg width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="18" r="7" stroke="#c9a84c" strokeWidth="1"/><path d="M8 38C8 30 36 30 36 38" stroke="#c9a84c" strokeWidth="1" strokeLinecap="round"/><circle cx="22" cy="18" r="2.5" fill="#c9a84c" opacity="0.4"/></svg>) },
             { n: 'II', title: 'Scan the Label', desc: 'Photograph the INCI ingredient list or barcode of any skincare product. Our AI vision model reads it with pharmaceutical precision.', icon: (<svg width="44" height="44" viewBox="0 0 44 44" fill="none"><rect x="4" y="4" width="14" height="14" rx="2" stroke="#c9a84c" strokeWidth="1"/><rect x="26" y="4" width="14" height="14" rx="2" stroke="#c9a84c" strokeWidth="1"/><rect x="4" y="26" width="14" height="14" rx="2" stroke="#c9a84c" strokeWidth="1"/><rect x="28" y="28" width="4" height="4" fill="#c9a84c" opacity="0.5"/><path d="M34 26v6M26 34h6M34 34h6v6" stroke="#c9a84c" strokeWidth="1" strokeLinecap="round"/></svg>) },
             { n: 'III', title: 'Receive Your Report', desc: 'A luxury-grade safety report: harmful ingredients flagged, beneficial actives celebrated, and a bespoke recommendation written for your skin.', icon: (<svg width="44" height="44" viewBox="0 0 44 44" fill="none"><rect x="8" y="4" width="28" height="36" rx="3" stroke="#c9a84c" strokeWidth="1"/><path d="M15 16h14M15 22h14M15 28h9" stroke="#c9a84c" strokeWidth="1" strokeLinecap="round"/><circle cx="33" cy="33" r="8" fill="#0f0f0f" stroke="#7ab68a" strokeWidth="1"/><path d="M29.5 33l2.5 2.5 5-5" stroke="#7ab68a" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>) },
           ].map((s, i) => (
-            <div key={i} style={{ padding: '52px 44px', background: i === 1 ? 'rgba(138,100,24,0.08)' : 'transparent', border: '1px solid rgba(201,168,76,0.1)', position: 'relative', transition: 'background 0.3s ease' }}
+            <div key={i} className="card-pad" style={{ background: i === 1 ? 'rgba(138,100,24,0.08)' : 'transparent', border: '1px solid rgba(201,168,76,0.1)', position: 'relative', transition: 'background 0.3s ease' }}
               onMouseEnter={e => e.currentTarget.style.background = 'rgba(138,100,24,0.1)'}
               onMouseLeave={e => e.currentTarget.style.background = i === 1 ? 'rgba(138,100,24,0.08)' : 'transparent'}
             >
@@ -279,7 +333,7 @@ function MethodSection() {
               <div style={{ marginBottom: 22 }}>{s.icon}</div>
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 500, color: 'var(--goldPale)', marginBottom: 16, letterSpacing: '0.5px' }}>{s.title}</h3>
               <p style={{ fontFamily: 'var(--font-reading)', fontSize: 15, color: '#2e2010', lineHeight: 1.9 }}>{s.desc}</p>
-              <div style={{ position: 'absolute', top: 52, right: 44, fontFamily: 'var(--font-display)', fontSize: 72, color: 'rgba(138,100,24,0.08)', lineHeight: 1, userSelect: 'none' }}>{s.n}</div>
+              <div className="method-card-num" style={{ position: 'absolute', top: 52, right: 44, fontFamily: 'var(--font-display)', fontSize: 72, color: 'rgba(138,100,24,0.08)', lineHeight: 1, userSelect: 'none' }}>{s.n}</div>
             </div>
           ))}
         </div>
@@ -351,19 +405,19 @@ function ScannerSection() {
   const canScan = skins.length > 0 && file
 
   return (
-    <section id="scanner" ref={sectionRef} style={{ padding: '120px 48px', background: 'var(--obsidian)' }}>
+    <section id="scanner" ref={sectionRef} className="section-pad" style={{ background: 'var(--obsidian)' }}>
       <div style={{ maxWidth: 1080, margin: '0 auto' }}>
         <SectionHeader label="Ingredient Intelligence" title="Analyse Your Product" sub="Select your skin profile, then upload any product label or barcode. Receive a personalised safety report in under ten seconds."/>
 
         {phase === 'idle' && (
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, marginTop: 64 }}>
-            <div style={{ padding: '44px', background: 'rgba(255,250,240,0.7)', border: '1px solid rgba(160,120,40,0.2)' }}>
+          <div className="grid-scan" style={{ marginTop: 64 }}>
+            <div className="card-pad" style={{ background: 'rgba(255,250,240,0.7)', border: '1px solid rgba(160,120,40,0.2)' }}>
               <div style={{ marginBottom: 32 }}>
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: 11, color: '#8a6418', letterSpacing: '3px', marginBottom: 10 }}>STEP ONE</div>
                 <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 28, fontWeight: 400, color: 'var(--goldPale)', marginBottom: 8 }}>Your Skin Profile</h3>
                 <p style={{ fontFamily: 'var(--font-reading)', fontSize: 14, color: '#5a4020', lineHeight: 1.7 }}>Select all skin types that apply to you</p>
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginBottom: 20 }}>
+              <div className="grid-skin" style={{ marginBottom: 20 }}>
                 {SKIN_TYPES.map(s => {
                   const on = skins.includes(s.id)
                   return (
@@ -402,7 +456,7 @@ function ScannerSection() {
               )}
             </div>
 
-            <div style={{ padding: '44px', background: 'rgba(255,250,240,0.7)', border: '1px solid rgba(160,120,40,0.2)', borderLeft: '1px solid rgba(201,168,76,0.06)', display: 'flex', flexDirection: 'column' }}>
+            <div className="card-pad" style={{ background: 'rgba(255,250,240,0.7)', border: '1px solid rgba(160,120,40,0.2)', display: 'flex', flexDirection: 'column' }}>
               <div style={{ marginBottom: 32 }}>
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: 11, color: '#8a6418', letterSpacing: '3px', marginBottom: 10 }}>STEP TWO</div>
                 <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 28, fontWeight: 400, color: 'var(--goldPale)', marginBottom: 8 }}>Upload Product</h3>
@@ -447,7 +501,7 @@ function ScannerSection() {
                 </div>
               )}
               <input ref={fileRef} type="file" accept="image/*" style={{ display: 'none' }} onChange={e => handleFile(e.target.files[0])}/>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 6, margin: '16px 0' }}>
+              <div className="grid-tips" style={{ margin: '16px 0' }}>
                 {[['Good lighting','No shadows'],['Label visible','INCI in frame'],['Barcode flat','No curled edges'],['Sharp focus','No motion blur']].map(([t]) => (
                   <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '8px 12px', background: 'rgba(255,250,240,0.7)', border: '1px solid rgba(255,255,255,0.05)' }}>
                     <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#c9a84c', opacity: 0.5, flexShrink: 0 }}/>
@@ -476,7 +530,7 @@ function ScannerSection() {
 
         {phase === 'scanning' && (
           <div style={{ marginTop: 64, display: 'flex', justifyContent: 'center' }}>
-            <div style={{ textAlign: 'center', maxWidth: 480, padding: '64px 48px', background: 'rgba(255,250,240,0.7)', border: '1px solid rgba(160,120,40,0.2)' }}>
+            <div className="card-pad" style={{ textAlign: 'center', maxWidth: 480, background: 'rgba(255,250,240,0.7)', border: '1px solid rgba(160,120,40,0.2)' }}>
               {preview && (
                 <div style={{ width: 88, height: 88, borderRadius: '50%', overflow: 'hidden', margin: '0 auto 36px', border: '1px solid rgba(201,168,76,0.3)', position: 'relative' }}>
                   <img src={preview} style={{ width: '100%', height: '100%', objectFit: 'cover' }}/>
@@ -500,7 +554,7 @@ function ScannerSection() {
 
         {phase === 'error' && (
           <div style={{ marginTop: 64, display: 'flex', justifyContent: 'center' }}>
-            <div style={{ textAlign: 'center', maxWidth: 440, padding: '64px 48px', background: 'rgba(196,112,96,0.04)', border: '1px solid rgba(196,112,96,0.2)' }}>
+            <div className="card-pad" style={{ textAlign: 'center', maxWidth: 440, background: 'rgba(196,112,96,0.04)', border: '1px solid rgba(196,112,96,0.2)' }}>
               <div style={{ width: 64, height: 64, borderRadius: '50%', border: '1px solid rgba(196,112,96,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 28px' }}>
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="12" stroke="#c47060" strokeWidth="1.2" opacity="0.6"/><path d="M14 8v8M14 19.5v1.5" stroke="#c47060" strokeWidth="1.8" strokeLinecap="round"/></svg>
               </div>
@@ -546,13 +600,13 @@ function ResultPanel({ result, preview, skins, score, tab, setTab, onReset }) {
 
   return (
     <div style={{ marginTop: 64, animation: 'fadeUp 0.6s ease both' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 2, marginBottom: 2 }}>
-        <div style={{ padding: '40px', background: 'rgba(255,250,240,0.7)', border: '1px solid rgba(160,120,40,0.2)', position: 'relative', overflow: 'hidden', boxShadow: `0 0 60px \${safeData.glow}` }}>
+      <div className="grid-result-header" style={{ marginBottom: 2 }}>
+        <div className="card-pad-sm" style={{ background: 'rgba(255,250,240,0.7)', border: '1px solid rgba(160,120,40,0.2)', position: 'relative', overflow: 'hidden', boxShadow: `0 0 60px \${safeData.glow}` }}>
           <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at top right,\${safeData.glow},transparent 60%)`, pointerEvents: 'none' }}/>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 24, position: 'relative' }}>
+          <div className="result-product-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 24, position: 'relative' }}>
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: 9, color: safeData.color, letterSpacing: '3.5px', marginBottom: 10 }}>{result.productType?.toUpperCase()}</div>
-              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 34, fontWeight: 500, color: 'var(--goldPale)', lineHeight: 1.1, marginBottom: 5 }}>{result.productName}</h2>
+              <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(24px, 5vw, 34px)', fontWeight: 500, color: 'var(--goldPale)', lineHeight: 1.1, marginBottom: 5 }}>{result.productName}</h2>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 12, color: '#5a4020', letterSpacing: '1px', marginBottom: 20 }}>{result.brand}</p>
               <div style={{ display: 'inline-block', padding: '6px 16px', background: `\${safeData.color}15`, border: `1px solid \${safeData.color}40`, marginBottom: 16 }}>
                 <span style={{ fontFamily: 'var(--font-display)', fontSize: 9, color: safeData.color, letterSpacing: '3px' }}>{safeData.label}</span>
@@ -560,13 +614,13 @@ function ResultPanel({ result, preview, skins, score, tab, setTab, onReset }) {
               <p style={{ fontFamily: 'var(--font-reading)', fontSize: 14, color: '#2e2010', lineHeight: 1.85, maxWidth: 440 }}>{result.summary}</p>
             </div>
             {preview && (
-              <div style={{ width: 90, height: 90, flexShrink: 0, border: `1px solid \${safeData.color}30`, overflow: 'hidden' }}>
+              <div className="product-preview" style={{ width: 90, height: 90, flexShrink: 0, border: `1px solid \${safeData.color}30`, overflow: 'hidden' }}>
                 <img src={preview} style={{ width: '100%', height: '100%', objectFit: 'cover' }}/>
               </div>
             )}
           </div>
         </div>
-        <div style={{ padding: '40px 36px', background: 'rgba(255,250,240,0.7)', border: '1px solid rgba(160,120,40,0.2)', borderLeft: 'none', textAlign: 'center', minWidth: 164 }}>
+        <div className="card-pad-sm result-score-col" style={{ background: 'rgba(255,250,240,0.7)', border: '1px solid rgba(160,120,40,0.2)', textAlign: 'center', minWidth: 0 }}>
           <svg width="104" height="104" viewBox="0 0 104 104" style={{ display: 'block', margin: '0 auto 14px' }}>
             <circle cx="52" cy="52" r="40" fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="6"/>
             <circle cx="52" cy="52" r="40" fill="none" stroke={safeData.color} strokeWidth="6"
@@ -580,7 +634,7 @@ function ResultPanel({ result, preview, skins, score, tab, setTab, onReset }) {
         </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2 }}>
+      <div className="grid-result-body">
         <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           <div style={{ padding: '28px 32px', background: verdData.bg, border: `1px solid \${verdData.br}` }}>
             <div style={{ fontFamily: 'var(--font-display)', fontSize: 9, color: verdData.fg, letterSpacing: '3px', marginBottom: 8 }}>SKIN COMPATIBILITY — {result.skinTypeVerdict?.toUpperCase()}</div>
@@ -615,7 +669,7 @@ function ResultPanel({ result, preview, skins, score, tab, setTab, onReset }) {
         </div>
 
         <div style={{ background: 'rgba(255,250,240,0.7)', border: '1px solid rgba(201,168,76,0.1)', display: 'flex', flexDirection: 'column' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', borderBottom: '1px solid rgba(201,168,76,0.1)' }}>
+          <div className="ingredient-tabs" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', borderBottom: '1px solid rgba(201,168,76,0.1)' }}>
             {[
               { id: 'harmful', label: 'Harmful',   count: result.harmfulIngredients?.length || 0, c: '#c47060' },
               { id: 'caution', label: 'Caution',   count: result.cautionIngredients?.length || 0, c: '#d4a855' },
@@ -623,7 +677,7 @@ function ResultPanel({ result, preview, skins, score, tab, setTab, onReset }) {
             ].map(t => (
               <button key={t.id} onClick={() => setTab(t.id)} style={{ background: tab === t.id ? `\${t.c}0d` : 'transparent', border: 'none', borderBottom: tab === t.id ? `2px solid \${t.c}` : '2px solid transparent', padding: '18px 8px', cursor: 'none', transition: 'all 0.2s' }}>
                 <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, color: tab === t.id ? t.c : 'var(--textFaint)', letterSpacing: '2px', textTransform: 'uppercase', marginBottom: 5 }}>{t.label}</div>
-                <div style={{ fontFamily: 'var(--font-display)', fontSize: 28, color: tab === t.id ? t.c : 'rgba(138,100,24,0.25)' }}>{t.count}</div>
+                <div className="tab-count" style={{ fontFamily: 'var(--font-display)', color: tab === t.id ? t.c : 'rgba(138,100,24,0.25)' }}>{t.count}</div>
               </button>
             ))}
           </div>
@@ -656,7 +710,7 @@ function ResultPanel({ result, preview, skins, score, tab, setTab, onReset }) {
         </div>
       </div>
 
-      <div style={{ display: 'flex', gap: 10, justifyContent: 'flex-end', marginTop: 20 }}>
+      <div className="result-actions" style={{ display: 'flex', gap: 10, marginTop: 20 }}>
         <OutlineButton onClick={onReset}>Scan Another</OutlineButton>
         <GoldButton onClick={onReset}>New Analysis</GoldButton>
       </div>
@@ -667,11 +721,11 @@ function ResultPanel({ result, preview, skins, score, tab, setTab, onReset }) {
 
 function PromiseSection() {
   return (
-    <section id="promise" style={{ padding: '120px 48px', background: 'var(--charcoal)', borderTop: '1px solid rgba(201,168,76,0.08)', borderBottom: '1px solid rgba(201,168,76,0.08)' }}>
-      <div style={{ maxWidth: 1080, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
+    <section id="promise" className="section-pad" style={{ background: 'var(--charcoal)', borderTop: '1px solid rgba(201,168,76,0.08)', borderBottom: '1px solid rgba(201,168,76,0.08)' }}>
+      <div className="grid-promise" style={{ maxWidth: 1080, margin: '0 auto' }}>
         <div>
           <div style={{ fontFamily: 'var(--font-display)', fontSize: 10, color: '#8a6418', letterSpacing: '4px', marginBottom: 20 }}>THE DERMIQUÉ PROMISE</div>
-          <h2 style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 300, fontSize: 44, color: 'var(--goldPale)', lineHeight: 1.15, marginBottom: 32 }}>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 300, fontSize: 'clamp(28px, 5vw, 44px)', color: 'var(--goldPale)', lineHeight: 1.15, marginBottom: 32 }}>
             "Your skin is the canvas.<br/>We illuminate what's on the brush."
           </h2>
           <p style={{ fontFamily: 'var(--font-reading)', fontSize: 16, color: '#2e2010', lineHeight: 2, marginBottom: 36 }}>
@@ -701,16 +755,16 @@ function PromiseSection() {
 
 function IngredientGuide() {
   return (
-    <section id="ingredients" style={{ padding: '120px 48px', background: 'var(--obsidian)' }}>
+    <section id="ingredients" className="section-pad" style={{ background: 'var(--obsidian)' }}>
       <div style={{ maxWidth: 1080, margin: '0 auto' }}>
         <SectionHeader label="Ingredient Intelligence" title="What We Analyse" sub="DERMIQUÉ evaluates every compound against three criteria — safety, compatibility, and benefit — personalised to your declared skin profile."/>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 2, marginTop: 64 }}>
+        <div className="grid-3" style={{ marginTop: 64 }}>
           {[
             { color: '#c47060', glow: 'rgba(196,112,96,0.12)', label: 'FLAGGED',    title: 'Harmful Compounds',    desc: 'Parabens, synthetic fragrances, SLS, PFAS, formaldehyde releasers, and other substances with documented links to skin irritation, hormonal disruption, or barrier damage.' },
             { color: '#d4a855', glow: 'rgba(212,168,85,0.12)',  label: 'MONITOR',    title: 'Caution Ingredients',  desc: 'Compounds that are broadly safe but may not suit every skin type. Denatured alcohols, high-concentration exfoliants, and sensitising preservatives fall here.' },
             { color: '#7ab68a', glow: 'rgba(122,182,138,0.12)', label: 'BENEFICIAL', title: 'Active Ingredients',   desc: 'Niacinamide, hyaluronic acid, ceramides, retinol, vitamin C, peptides — highlighted with explanations of their specific benefits for your skin type.' },
           ].map(c => (
-            <div key={c.title} style={{ padding: '44px 40px', background: c.glow, border: `1px solid \${c.color}22`, borderTop: `2px solid \${c.color}` }}>
+            <div key={c.title} className="card-pad" style={{ background: c.glow, border: `1px solid \${c.color}22`, borderTop: `2px solid \${c.color}` }}>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: 9, color: c.color, letterSpacing: '3px', marginBottom: 22 }}>{c.label}</div>
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, fontWeight: 500, color: 'var(--goldPale)', marginBottom: 18 }}>{c.title}</h3>
               <p style={{ fontFamily: 'var(--font-reading)', fontSize: 14, color: '#2e2010', lineHeight: 1.95 }}>{c.desc}</p>
@@ -724,9 +778,9 @@ function IngredientGuide() {
 
 function Footer({ onScanClick }) {
   return (
-    <footer style={{ background: '#ede8dc', borderTop: '1px solid rgba(201,168,76,0.1)', padding: '72px 48px 40px' }}>
+    <footer className="section-pad" style={{ background: '#ede8dc', borderTop: '1px solid rgba(201,168,76,0.1)', paddingBottom: 40 }}>
       <div style={{ maxWidth: 1080, margin: '0 auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 48, marginBottom: 64 }}>
+        <div className="grid-footer" style={{ marginBottom: 64 }}>
           <div>
             <div style={{ fontFamily: 'var(--font-display)', fontSize: 20, color: '#5a3e10', letterSpacing: '4px', marginBottom: 8 }}>DERMIQUÉ</div>
             <div style={{ fontFamily: 'var(--font-body)', fontSize: 9, color: 'rgba(201,168,76,0.4)', letterSpacing: '3px', marginBottom: 20 }}>LUXURY INGREDIENT INTELLIGENCE</div>
@@ -748,9 +802,9 @@ function Footer({ onScanClick }) {
             </div>
           ))}
         </div>
-        <div style={{ padding: '36px 44px', background: 'rgba(138,100,24,0.08)', border: '1px solid rgba(201,168,76,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 32, marginBottom: 48, flexWrap: 'wrap' }}>
+        <div className="footer-cta card-pad" style={{ background: 'rgba(138,100,24,0.08)', border: '1px solid rgba(201,168,76,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 32, marginBottom: 48 }}>
           <div>
-            <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 26, color: 'var(--goldPale)', marginBottom: 6 }}>Ready to decode your skincare?</div>
+            <div style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: 'clamp(20px, 4vw, 26px)', color: 'var(--goldPale)', marginBottom: 6 }}>Ready to decode your skincare?</div>
             <p style={{ fontFamily: 'var(--font-reading)', fontSize: 13, color: '#5a4020' }}>Scan any product. Free. Instant. Personalised.</p>
           </div>
           <GoldButton onClick={onScanClick}>Begin Analysis</GoldButton>
@@ -769,7 +823,7 @@ function SectionHeader({ label, title, sub }) {
     <div style={{ textAlign: 'center', maxWidth: 640, margin: '0 auto' }}>
       <div style={{ fontFamily: 'var(--font-display)', fontSize: 10, color: '#8a6418', letterSpacing: '4px', textTransform: 'uppercase', marginBottom: 16 }}>{label}</div>
       <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: 'clamp(30px,4vw,52px)', fontWeight: 400, color: 'var(--goldPale)', lineHeight: 1.1, letterSpacing: '0.5px', marginBottom: sub ? 14 : 0 }}>{title}</h2>
-      {sub && <p style={{ fontFamily: 'var(--font-reading)', fontSize: 16, color: '#2e2010', lineHeight: 1.85, marginTop: 14 }}>{sub}</p>}
+      {sub && <p style={{ fontFamily: 'var(--font-reading)', fontSize: 'clamp(14px, 2.5vw, 16px)', color: '#2e2010', lineHeight: 1.85, marginTop: 14 }}>{sub}</p>}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14, marginTop: 24 }}>
         <div style={{ height: 1, width: 56, background: 'linear-gradient(90deg,transparent,rgba(201,168,76,0.4))' }}/>
         <svg width="8" height="8" viewBox="0 0 8 8" fill="#c9a84c" opacity="0.5"><polygon points="4,0 8,4 4,8 0,4"/></svg>
